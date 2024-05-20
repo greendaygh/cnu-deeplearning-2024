@@ -1,0 +1,8 @@
+---
+title: "Contents"
+listing:
+  contents: contents
+  sort: "date desc"
+  type: default
+  categories: true
+---

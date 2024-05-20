@@ -1,0 +1,78 @@
+LOCUS       JQ064510                1150 bp    DNA     linear   SYN 20-FEB-2012
+DEFINITION  Synthetic construct clone eGFP-OsP5SM_E/R eGFP (eGFP) gene,
+            complete cds.
+ACCESSION   JQ064510
+VERSION     JQ064510.1
+KEYWORDS    .
+SOURCE      synthetic construct
+  ORGANISM  synthetic construct
+            other sequences; artificial sequences.
+REFERENCE   1  (bases 1 to 1150)
+  AUTHORS   Hickey,S.F., Sridhar,M., Westermann,A.J., Qin,Q., Vijayendra,P.,
+            Liou,G. and Hammond,M.C.
+  TITLE     Transgene regulation in plants by alternative splicing of a suicide
+            exon
+  JOURNAL   Nucleic Acids Res. (2012) In press
+   PUBMED   22311854
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 1150)
+  AUTHORS   Hickey,S.F., Sridhar,M., Westermann,A.J., Qin,Q., Vijayendra,P.,
+            Liou,G. and Hammond,M.C.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-NOV-2011) Chemistry, UC Berkeley, 204 Lewis Hall,
+            Berkeley, CA 94720, USA
+FEATURES             Location/Qualifiers
+     source          1..1150
+                     /organism="synthetic construct"
+                     /mol_type="other DNA"
+                     /db_xref="taxon:32630"
+                     /clone="eGFP-OsP5SM_E/R"
+     gene            1..1150
+                     /gene="eGFP"
+     CDS             join(1..294,719..1150)
+                     /gene="eGFP"
+                     /note="exon-skipped variant"
+                     /codon_start=1
+                     /transl_table=11
+                     /product="eGFP"
+                     /protein_id="AFA52654.1"
+                     /translation="MSRVSKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGK
+                     LTLKFICTTGKLPVPWPTLVTTLTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTIF
+                     FKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYIMADKQ
+                     KNGIKVNFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKR
+                     DHMVLLEFVTAAGITLGMDELYK"
+     misc_feature    295..718
+                     /gene="eGFP"
+                     /note="Oryza sativa P5SM splice cassette; between GAG
+                     codon (E) and AGA codon (R)"
+     exon            445..620
+                     /gene="eGFP"
+                     /note="alternatively spliced suicide exon, introduces
+                     premature termination codon when retained"
+     misc_feature    475..620
+                     /gene="eGFP"
+                     /note="Oryza sativa plant 5S rRNA mimic (OsP5SM) element;
+                     derived from OS05G0121400_1"
+ORIGIN      
+        1 atgtctagag tgagcaaggg cgaggagctg ttcaccgggg tggtgcccat cctggtcgag
+       61 ctggacggcg acgtaaacgg ccacaagttc agcgtgtccg gcgagggcga gggcgatgcc
+      121 acctacggca agctgaccct gaagttcatc tgcaccaccg gcaagctgcc cgtgccctgg
+      181 cccaccctcg tgaccaccct gacctacggc gtgcagtgct tcagccgcta ccccgaccac
+      241 atgaagcagc acgacttctt caagtccgcc atgcccgaag gctacgtcca ggaggtagat
+      301 ttatgcatcc tcttgtcatg agaagtcgaa ttgttcccat tctgtgtgtt gcagctacag
+      361 atggagatac atagagatac tcgtggattt tgcttagtgt tgagttttgt tctggttgtg
+      421 aactaaaagt ttatacattt gcaggaaata aatagccttt tgtttaaatc aaaaggtctt
+      481 acctatgtta gtgtgaagca ttggatccca aagaactcca aaatgcgatg aggcatattt
+      541 aatcttgtct ggactagtaa caggttggga tgaccacctg tgaagctcca acaggattgc
+      601 ctcctcacgc aatgtttgag gtctgatgtt caatagcttg ttttgtttca ctttgctttg
+      661 gactttcttt tcgccaatga gctatgtttc tgatggtttt cactcttttg gtgtgtagag
+      721 aaccatcttc ttcaaggacg acggcaacta caagacccgc gccgaggtga agttcgaggg
+      781 cgacaccctg gtgaaccgca tcgagctgaa gggcatcgac ttcaaggagg acggcaacat
+      841 cctggggcac aagctggagt acaactacaa cagccacaac gtctatatca tggccgacaa
+      901 gcagaagaac ggcatcaagg tgaacttcaa gatccgccac aacatcgagg acggcagcgt
+      961 gcagctcgcc gaccactacc agcagaacac ccccatcggc gacggccccg tgctgctgcc
+     1021 cgacaaccac tacctgagca cccagtccgc cctgagcaaa gaccccaacg agaagcgcga
+     1081 tcacatggtc ctgctggagt tcgtgaccgc cgccgggatc actctcggca tggacgagct
+     1141 gtacaagtaa
+//
+

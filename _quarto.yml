@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "CNU Deep Learning"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Contents
+        href: contents.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
