@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CNU Deep Learning - 4&nbsp; Chapter 2 Data handling</title>
+<title>CNU Deep Learning - 4&nbsp; Data handling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,7 +115,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cnu_data_handling.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2 Data handling</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cnu_data_handling.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data handling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -162,13 +162,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cnu_basic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1 Basics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Python Basics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./cnu_data_handling.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2 Data handling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data handling</span></span></a>
   </div>
 </li>
     </ul>
@@ -181,21 +181,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#numpy" id="toc-numpy" class="nav-link active" data-scroll-target="#numpy"><span class="header-section-number">4.0.1</span> 1. NumPy</a></li>
-  <li><a href="#numpy-자료구조-ndarray" id="toc-numpy-자료구조-ndarray" class="nav-link" data-scroll-target="#numpy-자료구조-ndarray"><span class="header-section-number">5</span> Numpy 자료구조 ndarray</a></li>
-  <li><a href="#pandas-자료구조-series-dataframe" id="toc-pandas-자료구조-series-dataframe" class="nav-link" data-scroll-target="#pandas-자료구조-series-dataframe"><span class="header-section-number">6</span> Pandas 자료구조 (Series, DataFrame)</a>
-  <ul class="collapse">
-  <li><a href="#numpy-1" id="toc-numpy-1" class="nav-link" data-scroll-target="#numpy-1"><span class="header-section-number">6.0.1</span> 1. NumPy</a></li>
-  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas"><span class="header-section-number">6.0.2</span> 2. Pandas</a></li>
-  <li><a href="#matplotlibseaborn" id="toc-matplotlibseaborn" class="nav-link" data-scroll-target="#matplotlibseaborn"><span class="header-section-number">6.0.3</span> 3. Matplotlib/Seaborn</a></li>
-  <li><a href="#example-analyzing-and-visualizing-dna-sequence-data" id="toc-example-analyzing-and-visualizing-dna-sequence-data" class="nav-link" data-scroll-target="#example-analyzing-and-visualizing-dna-sequence-data"><span class="header-section-number">6.0.4</span> Example: Analyzing and Visualizing DNA Sequence Data</a></li>
-  <li><a href="#explanation" id="toc-explanation" class="nav-link" data-scroll-target="#explanation"><span class="header-section-number">6.0.5</span> Explanation:</a></li>
-  <li><a href="#numpy-2" id="toc-numpy-2" class="nav-link" data-scroll-target="#numpy-2"><span class="header-section-number">6.0.6</span> 1. NumPy</a></li>
-  <li><a href="#pandas-1" id="toc-pandas-1" class="nav-link" data-scroll-target="#pandas-1"><span class="header-section-number">6.0.7</span> 2. Pandas</a></li>
-  <li><a href="#matplotlibseaborn-1" id="toc-matplotlibseaborn-1" class="nav-link" data-scroll-target="#matplotlibseaborn-1"><span class="header-section-number">6.0.8</span> 3. Matplotlib/Seaborn</a></li>
-  <li><a href="#example-analyzing-and-visualizing-dna-sequence-data-1" id="toc-example-analyzing-and-visualizing-dna-sequence-data-1" class="nav-link" data-scroll-target="#example-analyzing-and-visualizing-dna-sequence-data-1"><span class="header-section-number">6.0.9</span> Example: Analyzing and Visualizing DNA Sequence Data</a></li>
-  <li><a href="#explanation-1" id="toc-explanation-1" class="nav-link" data-scroll-target="#explanation-1"><span class="header-section-number">6.0.10</span> Explanation:</a></li>
-  </ul></li>
+  <li><a href="#user" id="toc-user" class="nav-link active" data-scroll-target="#user"><span class="header-section-number">4.0.1</span> [User]</a></li>
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt"><span class="header-section-number">4.0.2</span> ChatGPT</a></li>
+  <li><a href="#numpy" id="toc-numpy" class="nav-link" data-scroll-target="#numpy"><span class="header-section-number">4.0.3</span> 1. NumPy</a></li>
+  <li><a href="#numpy-1" id="toc-numpy-1" class="nav-link" data-scroll-target="#numpy-1"><span class="header-section-number">4.0.4</span> 1. NumPy</a></li>
+  <li><a href="#pandas" id="toc-pandas" class="nav-link" data-scroll-target="#pandas"><span class="header-section-number">4.0.5</span> 2. Pandas</a></li>
+  <li><a href="#matplotlibseaborn" id="toc-matplotlibseaborn" class="nav-link" data-scroll-target="#matplotlibseaborn"><span class="header-section-number">4.0.6</span> 3. Matplotlib/Seaborn</a></li>
+  <li><a href="#example-analyzing-and-visualizing-dna-sequence-data" id="toc-example-analyzing-and-visualizing-dna-sequence-data" class="nav-link" data-scroll-target="#example-analyzing-and-visualizing-dna-sequence-data"><span class="header-section-number">4.0.7</span> Example: Analyzing and Visualizing DNA Sequence Data</a></li>
+  <li><a href="#explanation" id="toc-explanation" class="nav-link" data-scroll-target="#explanation"><span class="header-section-number">4.0.8</span> Explanation:</a></li>
+  <li><a href="#numpy-2" id="toc-numpy-2" class="nav-link" data-scroll-target="#numpy-2"><span class="header-section-number">4.0.9</span> 1. NumPy</a></li>
+  <li><a href="#pandas-1" id="toc-pandas-1" class="nav-link" data-scroll-target="#pandas-1"><span class="header-section-number">4.0.10</span> 2. Pandas</a></li>
+  <li><a href="#matplotlibseaborn-1" id="toc-matplotlibseaborn-1" class="nav-link" data-scroll-target="#matplotlibseaborn-1"><span class="header-section-number">4.0.11</span> 3. Matplotlib/Seaborn</a></li>
+  <li><a href="#example-analyzing-and-visualizing-dna-sequence-data-1" id="toc-example-analyzing-and-visualizing-dna-sequence-data-1" class="nav-link" data-scroll-target="#example-analyzing-and-visualizing-dna-sequence-data-1"><span class="header-section-number">4.0.12</span> Example: Analyzing and Visualizing DNA Sequence Data</a></li>
+  <li><a href="#explanation-1" id="toc-explanation-1" class="nav-link" data-scroll-target="#explanation-1"><span class="header-section-number">4.0.13</span> Explanation:</a></li>
   </ul>
 </nav>
     </div>
@@ -204,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2 Data handling</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data handling</span></h1>
 </div>
 
 
@@ -221,19 +219,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<ul>
-<li>충남대학교, 기계학습 기반 서열 분석</li>
-<li>공유된 파일 <code>2024-cnu-lecture</code> 폴더에 복사후 open</li>
-</ul>
-<section id="구글-드라이브-연결-세션이-다시-시작-될-때에도-실행-필요" class="level4" data-number="4.0.0.1">
-<h4 data-number="4.0.0.1" class="anchored" data-anchor-id="구글-드라이브-연결-세션이-다시-시작-될-때에도-실행-필요"><span class="header-section-number">4.0.0.1</span> 구글 드라이브 연결 (세션이 다시 시작 될 때에도 실행 필요)</h4>
-<div id="cell-2" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193227264,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:360,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="6c9c826f-6489-401c-8755-5ab16df6c021">
+<section id="구글-드라이브-연결" class="level4" data-number="4.0.0.1">
+<h4 data-number="4.0.0.1" class="anchored" data-anchor-id="구글-드라이브-연결"><span class="header-section-number">4.0.0.1</span> 구글 드라이브 연결</h4>
+<div id="cell-2" class="cell" data-executioninfo="{&quot;elapsed&quot;:360,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193227264,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="6c9c826f-6489-401c-8755-5ab16df6c021">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/content</code></pre>
 </div>
 </div>
-<div id="cell-3" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193247665,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:18951,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="a544598a-e1de-4f4e-9f32-4009f9f9c29d">
+<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:18951,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193247665,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="a544598a-e1de-4f4e-9f32-4009f9f9c29d">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -243,29 +237,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Mounted at /content/drive</code></pre>
 </div>
 </div>
-<div id="cell-4" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193247665,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="f416cba3-e5dc-4098-8986-1f238cbb989b">
+<div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193247665,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="f416cba3-e5dc-4098-8986-1f238cbb989b">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>/content/drive/MyDrive/2024-cnu-lecture</code></pre>
 </div>
 </div>
 </section>
-<section id="user" class="level4" data-number="4.0.0.2">
-<h4 data-number="4.0.0.2" class="anchored" data-anchor-id="user"><span class="header-section-number">4.0.0.2</span> User:</h4>
+<section id="user" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="user"><span class="header-section-number">4.0.1</span> [User]</h3>
 <p>I want to learn “2. Data Handling and Analysis”. can you explain me a brief explanation and examples?</p>
 </section>
-<section id="chatgpt" class="level4" data-number="4.0.0.3">
-<h4 data-number="4.0.0.3" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">4.0.0.3</span> ChatGPT</h4>
+<section id="chatgpt" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">4.0.2</span> <a href="#chatgpt-1">ChatGPT</a></h3>
 <p>Sure! Data handling and analysis are essential skills in Python, especially for tasks like manipulating datasets, performing statistical analyses, and creating visualizations. We’ll focus on the key libraries used for these purposes: NumPy, Pandas, and Matplotlib/Seaborn.</p>
 </section>
-<section id="numpy" class="level3" data-number="4.0.1">
-<h3 data-number="4.0.1" class="anchored" data-anchor-id="numpy"><span class="header-section-number">4.0.1</span> 1. NumPy</h3>
+<section id="numpy" class="level3" data-number="4.0.3">
+<h3 data-number="4.0.3" class="anchored" data-anchor-id="numpy"><span class="header-section-number">4.0.3</span> 1. NumPy</h3>
 <p>NumPy is a powerful library for numerical operations and handling arrays.</p>
-<section id="basics-of-numpy" class="level4" data-number="4.0.1.1">
-<h4 data-number="4.0.1.1" class="anchored" data-anchor-id="basics-of-numpy"><span class="header-section-number">4.0.1.1</span> Basics of NumPy</h4>
+<section id="basics-of-numpy" class="level4" data-number="4.0.3.1">
+<h4 data-number="4.0.3.1" class="anchored" data-anchor-id="basics-of-numpy"><span class="header-section-number">4.0.3.1</span> Basics of NumPy</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!pip</span> install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="cell-7" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193466038,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="8669a38b-214a-41fe-da6f-521e0d1f352b">
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193466038,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="8669a38b-214a-41fe-da6f-521e0d1f352b">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -294,9 +288,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-</section>
-<section id="numpy-자료구조-ndarray" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Numpy 자료구조 ndarray</h1>
+<section id="numpy-자료구조-ndarray" class="level4" data-number="4.0.3.2">
+<h4 data-number="4.0.3.2" class="anchored" data-anchor-id="numpy-자료구조-ndarray"><span class="header-section-number">4.0.3.2</span> Numpy 자료구조 ndarray</h4>
 <ul>
 <li>행렬이나 다차원 배열 처리용 파이썬 라이브러리</li>
 <li>같은 타입의 데이터만 허용</li>
@@ -330,7 +323,7 @@ int64
 &lt;class 'numpy.ndarray'&gt;</code></pre>
 </div>
 </div>
-<div id="cell-13" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193808053,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="8d83c6ab-746e-4169-c3e1-1fda0ccad227">
+<div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:1,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193808053,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="8d83c6ab-746e-4169-c3e1-1fda0ccad227">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>arr2 <span class="op">=</span> np.array([[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>], [<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]])</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr2)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(arr2))</span>
@@ -399,8 +392,8 @@ int64</code></pre>
 <li>np.min()</li>
 </ul>
 </section>
-<section id="pandas-자료구조-series-dataframe" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Pandas 자료구조 (Series, DataFrame)</h1>
+<section id="pandas-자료구조-series-dataframe" class="level4" data-number="4.0.3.3">
+<h4 data-number="4.0.3.3" class="anchored" data-anchor-id="pandas-자료구조-series-dataframe"><span class="header-section-number">4.0.3.3</span> Pandas 자료구조 (Series, DataFrame)</h4>
 <ul>
 <li>Pandas의 Series는 1차원, DataFrame은 2차원 데이터를 다루는 자료구조</li>
 <li>DataFrames are the primary data structure in pandas, representing tabular data with rows and columns.</li>
@@ -435,9 +428,10 @@ E    1.1
 dtype: float64</code></pre>
 </div>
 </div>
-<section id="create-from-a-dictionary" class="level4" data-number="6.0.0.1">
-<h4 data-number="6.0.0.1" class="anchored" data-anchor-id="create-from-a-dictionary"><span class="header-section-number">6.0.0.1</span> Create from a dictionary</h4>
-<div id="cell-24" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716196010054,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:341,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="dc2450d0-a981-49e9-c90d-d5b31a5ceb74">
+</section>
+<section id="create-from-a-dictionary" class="level4" data-number="4.0.3.4">
+<h4 data-number="4.0.3.4" class="anchored" data-anchor-id="create-from-a-dictionary"><span class="header-section-number">4.0.3.4</span> Create from a dictionary</h4>
+<div id="cell-24" class="cell" data-executioninfo="{&quot;elapsed&quot;:341,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716196010054,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="dc2450d0-a981-49e9-c90d-d5b31a5ceb74">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
@@ -456,9 +450,9 @@ dtype: float64</code></pre>
 </div>
 </div>
 </section>
-<section id="create-from-a-list-of-dictionary" class="level4" data-number="6.0.0.2">
-<h4 data-number="6.0.0.2" class="anchored" data-anchor-id="create-from-a-list-of-dictionary"><span class="header-section-number">6.0.0.2</span> Create from a list of dictionary</h4>
-<div id="cell-26" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716196038611,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:336,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="4e46ca04-d172-44b7-830b-2655da9a8e68">
+<section id="create-from-a-list-of-dictionary" class="level4" data-number="4.0.3.5">
+<h4 data-number="4.0.3.5" class="anchored" data-anchor-id="create-from-a-list-of-dictionary"><span class="header-section-number">4.0.3.5</span> Create from a list of dictionary</h4>
+<div id="cell-26" class="cell" data-executioninfo="{&quot;elapsed&quot;:336,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716196038611,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="4e46ca04-d172-44b7-830b-2655da9a8e68">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Name'</span>: <span class="st">'Alice'</span>, <span class="st">'Age'</span>: <span class="dv">25</span>, <span class="st">'Height'</span>: <span class="fl">5.5</span>},</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'Name'</span>: <span class="st">'Bob'</span>, <span class="st">'Age'</span>: <span class="dv">30</span>, <span class="st">'Height'</span>: <span class="fl">6.0</span>},</span>
@@ -563,15 +557,16 @@ Index(['day1', 'day2', 'day3'], dtype='object')
 </div>
 </div>
 </section>
-<section id="chatgpt-1" class="level4" data-number="6.0.0.3">
-<h4 data-number="6.0.0.3" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">6.0.0.3</span> ChatGPT</h4>
+<section id="chatgpt-1" class="level4" data-number="4.0.3.6">
+<h4 data-number="4.0.3.6" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">4.0.3.6</span> ChatGPT</h4>
 <p>Sure! Data handling and analysis are essential skills in Python, especially for tasks like manipulating datasets, performing statistical analyses, and creating visualizations. We’ll focus on the key libraries used for these purposes: NumPy, Pandas, and Matplotlib/Seaborn.</p>
 </section>
-<section id="numpy-1" class="level3" data-number="6.0.1">
-<h3 data-number="6.0.1" class="anchored" data-anchor-id="numpy-1"><span class="header-section-number">6.0.1</span> 1. NumPy</h3>
+</section>
+<section id="numpy-1" class="level3" data-number="4.0.4">
+<h3 data-number="4.0.4" class="anchored" data-anchor-id="numpy-1"><span class="header-section-number">4.0.4</span> 1. NumPy</h3>
 <p>NumPy is a powerful library for numerical operations and handling arrays.</p>
-<section id="basics-of-numpy-1" class="level4" data-number="6.0.1.1">
-<h4 data-number="6.0.1.1" class="anchored" data-anchor-id="basics-of-numpy-1"><span class="header-section-number">6.0.1.1</span> Basics of NumPy</h4>
+<section id="basics-of-numpy-1" class="level4" data-number="4.0.4.1">
+<h4 data-number="4.0.4.1" class="anchored" data-anchor-id="basics-of-numpy-1"><span class="header-section-number">4.0.4.1</span> Basics of NumPy</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Importing NumPy:</strong></p>
@@ -594,11 +589,11 @@ Index(['day1', 'day2', 'day3'], dtype='object')
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.sqrt(arr1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="pandas" class="level3" data-number="6.0.2">
-<h3 data-number="6.0.2" class="anchored" data-anchor-id="pandas"><span class="header-section-number">6.0.2</span> 2. Pandas</h3>
+<section id="pandas" class="level3" data-number="4.0.5">
+<h3 data-number="4.0.5" class="anchored" data-anchor-id="pandas"><span class="header-section-number">4.0.5</span> 2. Pandas</h3>
 <p>Pandas is a powerful library for data manipulation and analysis. It provides data structures like DataFrame, which is similar to tables in databases or spreadsheets.</p>
-<section id="basics-of-pandas" class="level4" data-number="6.0.2.1">
-<h4 data-number="6.0.2.1" class="anchored" data-anchor-id="basics-of-pandas"><span class="header-section-number">6.0.2.1</span> Basics of Pandas</h4>
+<section id="basics-of-pandas" class="level4" data-number="4.0.5.1">
+<h4 data-number="4.0.5.1" class="anchored" data-anchor-id="basics-of-pandas"><span class="header-section-number">4.0.5.1</span> Basics of Pandas</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Importing Pandas:</strong></p>
@@ -638,11 +633,11 @@ Index(['day1', 'day2', 'day3'], dtype='object')
 <span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grouped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="matplotlibseaborn" class="level3" data-number="6.0.3">
-<h3 data-number="6.0.3" class="anchored" data-anchor-id="matplotlibseaborn"><span class="header-section-number">6.0.3</span> 3. Matplotlib/Seaborn</h3>
+<section id="matplotlibseaborn" class="level3" data-number="4.0.6">
+<h3 data-number="4.0.6" class="anchored" data-anchor-id="matplotlibseaborn"><span class="header-section-number">4.0.6</span> 3. Matplotlib/Seaborn</h3>
 <p>Matplotlib is a plotting library for creating static, animated, and interactive visualizations. Seaborn is built on top of Matplotlib and provides a high-level interface for drawing attractive statistical graphics.</p>
-<section id="basics-of-matplotlib" class="level4" data-number="6.0.3.1">
-<h4 data-number="6.0.3.1" class="anchored" data-anchor-id="basics-of-matplotlib"><span class="header-section-number">6.0.3.1</span> Basics of Matplotlib</h4>
+<section id="basics-of-matplotlib" class="level4" data-number="4.0.6.1">
+<h4 data-number="4.0.6.1" class="anchored" data-anchor-id="basics-of-matplotlib"><span class="header-section-number">4.0.6.1</span> Basics of Matplotlib</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install matplotlib seaborn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Importing Matplotlib and Seaborn:</strong></p>
@@ -662,8 +657,8 @@ Index(['day1', 'day2', 'day3'], dtype='object')
 <span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="example-analyzing-and-visualizing-dna-sequence-data" class="level3" data-number="6.0.4">
-<h3 data-number="6.0.4" class="anchored" data-anchor-id="example-analyzing-and-visualizing-dna-sequence-data"><span class="header-section-number">6.0.4</span> Example: Analyzing and Visualizing DNA Sequence Data</h3>
+<section id="example-analyzing-and-visualizing-dna-sequence-data" class="level3" data-number="4.0.7">
+<h3 data-number="4.0.7" class="anchored" data-anchor-id="example-analyzing-and-visualizing-dna-sequence-data"><span class="header-section-number">4.0.7</span> Example: Analyzing and Visualizing DNA Sequence Data</h3>
 <p>Let’s combine these libraries in a practical example. We’ll read a CSV file containing DNA sequences and their properties, perform some analysis, and visualize the results.</p>
 <p><strong>Example Data (<code>dna_data.csv</code>):</strong></p>
 <pre class="csv"><code>Sequence,Length,GC_Content
@@ -704,24 +699,24 @@ TGCATGCATGCTAGCTAGCA,20,45.0</code></pre>
 <span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="explanation" class="level3" data-number="6.0.5">
-<h3 data-number="6.0.5" class="anchored" data-anchor-id="explanation"><span class="header-section-number">6.0.5</span> Explanation:</h3>
+<section id="explanation" class="level3" data-number="4.0.8">
+<h3 data-number="4.0.8" class="anchored" data-anchor-id="explanation"><span class="header-section-number">4.0.8</span> Explanation:</h3>
 <ul>
 <li><strong>Reading Data</strong>: We read the DNA sequence data from a CSV file into a Pandas DataFrame.</li>
 <li><strong>Calculating Statistics</strong>: We calculate the mean and standard deviation of the GC content using Pandas.</li>
 <li><strong>Visualizing Data</strong>: We create a histogram of the GC content and a boxplot of the sequence lengths using Matplotlib and Seaborn.</li>
 </ul>
 <p>This script demonstrates the integration of data handling, analysis, and visualization in Python. By learning and practicing these concepts, you’ll be well-equipped to handle and analyze biological data.</p>
-<section id="chatgpt-2" class="level4" data-number="6.0.5.1">
-<h4 data-number="6.0.5.1" class="anchored" data-anchor-id="chatgpt-2"><span class="header-section-number">6.0.5.1</span> ChatGPT</h4>
+<section id="chatgpt-2" class="level4" data-number="4.0.8.1">
+<h4 data-number="4.0.8.1" class="anchored" data-anchor-id="chatgpt-2"><span class="header-section-number">4.0.8.1</span> ChatGPT</h4>
 <p>Sure! Data handling and analysis are essential skills in Python, especially for tasks like manipulating datasets, performing statistical analyses, and creating visualizations. We’ll focus on the key libraries used for these purposes: NumPy, Pandas, and Matplotlib/Seaborn.</p>
 </section>
 </section>
-<section id="numpy-2" class="level3" data-number="6.0.6">
-<h3 data-number="6.0.6" class="anchored" data-anchor-id="numpy-2"><span class="header-section-number">6.0.6</span> 1. NumPy</h3>
+<section id="numpy-2" class="level3" data-number="4.0.9">
+<h3 data-number="4.0.9" class="anchored" data-anchor-id="numpy-2"><span class="header-section-number">4.0.9</span> 1. NumPy</h3>
 <p>NumPy is a powerful library for numerical operations and handling arrays.</p>
-<section id="basics-of-numpy-2" class="level4" data-number="6.0.6.1">
-<h4 data-number="6.0.6.1" class="anchored" data-anchor-id="basics-of-numpy-2"><span class="header-section-number">6.0.6.1</span> Basics of NumPy</h4>
+<section id="basics-of-numpy-2" class="level4" data-number="4.0.9.1">
+<h4 data-number="4.0.9.1" class="anchored" data-anchor-id="basics-of-numpy-2"><span class="header-section-number">4.0.9.1</span> Basics of NumPy</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install numpy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Importing NumPy:</strong></p>
@@ -744,11 +739,11 @@ TGCATGCATGCTAGCTAGCA,20,45.0</code></pre>
 <span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.sqrt(arr1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="pandas-1" class="level3" data-number="6.0.7">
-<h3 data-number="6.0.7" class="anchored" data-anchor-id="pandas-1"><span class="header-section-number">6.0.7</span> 2. Pandas</h3>
+<section id="pandas-1" class="level3" data-number="4.0.10">
+<h3 data-number="4.0.10" class="anchored" data-anchor-id="pandas-1"><span class="header-section-number">4.0.10</span> 2. Pandas</h3>
 <p>Pandas is a powerful library for data manipulation and analysis. It provides data structures like DataFrame, which is similar to tables in databases or spreadsheets.</p>
-<section id="basics-of-pandas-1" class="level4" data-number="6.0.7.1">
-<h4 data-number="6.0.7.1" class="anchored" data-anchor-id="basics-of-pandas-1"><span class="header-section-number">6.0.7.1</span> Basics of Pandas</h4>
+<section id="basics-of-pandas-1" class="level4" data-number="4.0.10.1">
+<h4 data-number="4.0.10.1" class="anchored" data-anchor-id="basics-of-pandas-1"><span class="header-section-number">4.0.10.1</span> Basics of Pandas</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Importing Pandas:</strong></p>
@@ -788,11 +783,11 @@ TGCATGCATGCTAGCTAGCA,20,45.0</code></pre>
 <span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grouped)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="matplotlibseaborn-1" class="level3" data-number="6.0.8">
-<h3 data-number="6.0.8" class="anchored" data-anchor-id="matplotlibseaborn-1"><span class="header-section-number">6.0.8</span> 3. Matplotlib/Seaborn</h3>
+<section id="matplotlibseaborn-1" class="level3" data-number="4.0.11">
+<h3 data-number="4.0.11" class="anchored" data-anchor-id="matplotlibseaborn-1"><span class="header-section-number">4.0.11</span> 3. Matplotlib/Seaborn</h3>
 <p>Matplotlib is a plotting library for creating static, animated, and interactive visualizations. Seaborn is built on top of Matplotlib and provides a high-level interface for drawing attractive statistical graphics.</p>
-<section id="basics-of-matplotlib-1" class="level4" data-number="6.0.8.1">
-<h4 data-number="6.0.8.1" class="anchored" data-anchor-id="basics-of-matplotlib-1"><span class="header-section-number">6.0.8.1</span> Basics of Matplotlib</h4>
+<section id="basics-of-matplotlib-1" class="level4" data-number="4.0.11.1">
+<h4 data-number="4.0.11.1" class="anchored" data-anchor-id="basics-of-matplotlib-1"><span class="header-section-number">4.0.11.1</span> Basics of Matplotlib</h4>
 <p><strong>Installation:</strong></p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install matplotlib seaborn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Importing Matplotlib and Seaborn:</strong></p>
@@ -812,8 +807,8 @@ TGCATGCATGCTAGCTAGCA,20,45.0</code></pre>
 <span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="example-analyzing-and-visualizing-dna-sequence-data-1" class="level3" data-number="6.0.9">
-<h3 data-number="6.0.9" class="anchored" data-anchor-id="example-analyzing-and-visualizing-dna-sequence-data-1"><span class="header-section-number">6.0.9</span> Example: Analyzing and Visualizing DNA Sequence Data</h3>
+<section id="example-analyzing-and-visualizing-dna-sequence-data-1" class="level3" data-number="4.0.12">
+<h3 data-number="4.0.12" class="anchored" data-anchor-id="example-analyzing-and-visualizing-dna-sequence-data-1"><span class="header-section-number">4.0.12</span> Example: Analyzing and Visualizing DNA Sequence Data</h3>
 <p>Let’s combine these libraries in a practical example. We’ll read a CSV file containing DNA sequences and their properties, perform some analysis, and visualize the results.</p>
 <p><strong>Example Data (<code>dna_data.csv</code>):</strong></p>
 <pre class="csv"><code>Sequence,Length,GC_Content
@@ -854,8 +849,8 @@ TGCATGCATGCTAGCTAGCA,20,45.0</code></pre>
 <span id="cb63-31"><a href="#cb63-31" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb63-32"><a href="#cb63-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="explanation-1" class="level3" data-number="6.0.10">
-<h3 data-number="6.0.10" class="anchored" data-anchor-id="explanation-1"><span class="header-section-number">6.0.10</span> Explanation:</h3>
+<section id="explanation-1" class="level3" data-number="4.0.13">
+<h3 data-number="4.0.13" class="anchored" data-anchor-id="explanation-1"><span class="header-section-number">4.0.13</span> Explanation:</h3>
 <ul>
 <li><strong>Reading Data</strong>: We read the DNA sequence data from a CSV file into a Pandas DataFrame.</li>
 <li><strong>Calculating Statistics</strong>: We calculate the mean and standard deviation of the GC content using Pandas.</li>
@@ -864,7 +859,6 @@ TGCATGCATGCTAGCTAGCA,20,45.0</code></pre>
 <p>This script demonstrates the integration of data handling, analysis, and visualization in Python. By learning and practicing these concepts, you’ll be well-equipped to handle and analyze biological data.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1279,8 +1273,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cnu_basic.html" class="pagination-link" aria-label="Chapter 1 Basics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 1 Basics</span></span>
+      <a href="./cnu_basic.html" class="pagination-link" aria-label="Python Basics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Python Basics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
