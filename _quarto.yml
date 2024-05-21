@@ -1,15 +1,23 @@
 project:
-  type: website
+  type: book
   output-dir: docs
-  
-website:
+
+book:
   title: "CNU Deep Learning"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - text: Contents
-        href: contents.qmd
+  reader-mode: true
+  author: "Haseong"
+  date: "2024-05-20"
+  page-footer: 
+    left: | 
+      2024 lecture note written by Haseong Kim
+    right: | 
+      This book was built with Quarto
+  chapters:
+    - index.qmd
+    - cnu_introduction.ipynb
+    - cnu_basic.ipynb
+    - cnu_data_handling.ipynb
+  
 
 format:
   html:
