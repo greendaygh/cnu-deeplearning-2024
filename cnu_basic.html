@@ -191,10 +191,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modules-and-packages" id="toc-modules-and-packages" class="nav-link" data-scroll-target="#modules-and-packages"><span class="header-section-number">3.0.7</span> 5. Modules and Packages</a></li>
   <li><a href="#file-io" id="toc-file-io" class="nav-link" data-scroll-target="#file-io"><span class="header-section-number">3.0.8</span> 6. File I/O</a></li>
   <li><a href="#example-basic-dna-sequence-manipulation" id="toc-example-basic-dna-sequence-manipulation" class="nav-link" data-scroll-target="#example-basic-dna-sequence-manipulation"><span class="header-section-number">3.0.9</span> Example: Basic DNA Sequence Manipulation</a></li>
-  <li><a href="#example-library-generation" id="toc-example-library-generation" class="nav-link" data-scroll-target="#example-library-generation"><span class="header-section-number">3.0.10</span> Example: Library generation</a></li>
+  <li><a href="#example-synonymous-mutant-library-generation" id="toc-example-synonymous-mutant-library-generation" class="nav-link" data-scroll-target="#example-synonymous-mutant-library-generation"><span class="header-section-number">3.0.10</span> Example: Synonymous Mutant Library Generation</a></li>
   <li><a href="#user-1" id="toc-user-1" class="nav-link" data-scroll-target="#user-1"><span class="header-section-number">3.0.11</span> [User]</a></li>
   <li><a href="#chatgpt-1" id="toc-chatgpt-1" class="nav-link" data-scroll-target="#chatgpt-1"><span class="header-section-number">3.0.12</span> [ChatGPT]</a></li>
-  <li><a href="#example-synonymous-mutant-library-generation" id="toc-example-synonymous-mutant-library-generation" class="nav-link" data-scroll-target="#example-synonymous-mutant-library-generation"><span class="header-section-number">3.0.13</span> Example: Synonymous Mutant Library Generation</a></li>
   </ul>
 </nav>
     </div>
@@ -227,25 +226,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div id="cell-2" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193048518,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="19651c53-ff1d-422e-d6ba-8a49a27af61c">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>/content</code></pre>
-</div>
 </div>
 <div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:19433,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193069235,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="bf5025e0-441a-4024-a80b-972e6f64d264">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>os.chdir(<span class="st">'drive/MyDrive/2024-cnu-lecture'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Mounted at /content/drive</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>os.chdir(<span class="st">'drive/MyDrive/2024-cnu-lecture'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-4" class="cell" data-executioninfo="{&quot;elapsed&quot;:353,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716193073438,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="88d4c80f-5514-4b4f-f091-8629256a865c">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>/content/drive/MyDrive/2024-cnu-lecture</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="user" class="level3" data-number="3.0.1">
@@ -261,33 +251,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="hello-world" class="level4" data-number="3.0.3.1">
 <h4 data-number="3.0.3.1" class="anchored" data-anchor-id="hello-world"><span class="header-section-number">3.0.3.1</span> Hello World</h4>
 <p>The simplest Python program:</p>
-<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:324,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179785170,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="a7464333-8d00-42d2-aa48-be9d0f30b3e7" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello, World!</code></pre>
-</div>
+<div id="cell-7" class="cell" data-executioninfo="{&quot;elapsed&quot;:324,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179785170,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="a7464333-8d00-42d2-aa48-be9d0f30b3e7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="variables-and-data-types" class="level4" data-number="3.0.3.2">
 <h4 data-number="3.0.3.2" class="anchored" data-anchor-id="variables-and-data-types"><span class="header-section-number">3.0.3.2</span> Variables and Data Types</h4>
 <p>Python supports various data types including integers, floats, strings, and booleans.</p>
-<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:339,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179788457,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="d03295c3-cc75-4799-b64d-21c16767d1fb" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Integer</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Float</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">3.14</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># String</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">"Hello, Python"</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Boolean</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>10 3.14 Hello, Python True</code></pre>
-</div>
+<div id="cell-9" class="cell" data-executioninfo="{&quot;elapsed&quot;:339,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179788457,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="d03295c3-cc75-4799-b64d-21c16767d1fb">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Integer</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Float</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">3.14</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># String</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="st">"Hello, Python"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Boolean</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a, b, c, d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -297,42 +281,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 data-number="3.0.4.1" class="anchored" data-anchor-id="if-else-statements"><span class="header-section-number">3.0.4.1</span> If-Else Statements</h4>
 <p>Used for decision making.</p>
 <div id="cell-11" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179793770,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="7bd50cd3-5fb5-4ad8-8b48-cca905aa365f">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"x is greater than 5"</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"x is 5 or less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>x is greater than 5</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">5</span>:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"x is greater than 5"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"x is 5 or less"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="loops" class="level4" data-number="3.0.4.2">
 <h4 data-number="3.0.4.2" class="anchored" data-anchor-id="loops"><span class="header-section-number">3.0.4.2</span> Loops</h4>
 <p>For repeating tasks.</p>
 <div id="cell-13" class="cell" data-executioninfo="{&quot;elapsed&quot;:299,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179797958,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="252db1a0-52a1-4fe1-8cd9-c897530c4625">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0
-1
-2
-3
-4</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-14" class="cell" data-outputid="185dc180-6e30-4799-cfb5-a59416c01daa">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">5</span>:</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0
-1
-2
-3
-4</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -342,26 +309,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 data-number="3.0.5.1" class="anchored" data-anchor-id="defining-functions"><span class="header-section-number">3.0.5.1</span> Defining Functions</h4>
 <p>Reusable blocks of code.</p>
 <div id="cell-16" class="cell" data-executioninfo="{&quot;elapsed&quot;:346,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716179806489,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="cf2c88a4-b3a2-4b02-ceed-42ea5e40c4ca">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(name):</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greet(<span class="st">"Alice"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello, Alice</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(name):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greet(<span class="st">"Alice"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-17" class="cell" data-executioninfo="{&quot;elapsed&quot;:19,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716204269823,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="3f20d9fb-d5ed-4511-8982-718c2fe12d13">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"my name is Alice"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>my name is Alice</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">"my name is Alice"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-18" class="cell" data-executioninfo="{&quot;elapsed&quot;:452,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1716204455879,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="07008ba5-3be1-425f-bb11-ac41d89cc8cb">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> names <span class="kw">in</span> names:</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">"My name is "</span>, name1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>NameError: name 'names' is not defined</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> names <span class="kw">in</span> names:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">"My name is "</span>, name1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>함수에 대한 개념 이해 중요</li>
@@ -374,34 +332,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>f와 <code>{}</code> 조합으로 표현할 수 있으며 출력이 고정된 문자열 맨 앞에 f를 붙여주고, 출력하고 싶은 변수값 등은 중괄호로 표현</li>
 </ul>
 <div id="cell-21" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716180297080,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="7480cc96-ef05-45eb-f2b8-76bcbe967b4e">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>mystr <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mystr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>My name is Alice</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mystr <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mystr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716180345265,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="5294fe1a-bd4a-496b-f25c-fb2952c7d5e8">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Alisa"</span>, <span class="st">"Alister"</span>]</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>mystr <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>names<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mystr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>My name is ['Alice', 'Alisa', 'Alister']</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Alisa"</span>, <span class="st">"Alister"</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>mystr <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>names<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mystr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716180409314,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="fc1ed067-98e0-42a7-db25-55bc78402828">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Alisa"</span>, <span class="st">"Alister"</span>]</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  mystr <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(mystr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>My name is Alice
-My name is Alisa
-My name is Alister</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Alisa"</span>, <span class="st">"Alister"</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  mystr <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(mystr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -417,14 +364,10 @@ My name is Alister</code></pre>
 <li>Ordered, mutable collections.</li>
 </ul>
 <div id="cell-26" class="cell" data-outputid="13fb3f3d-2d9b-45a4-f001-746d55a557c9">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>]</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fruits[<span class="dv">0</span>])  <span class="co"># Accessing elements</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>fruits.append(<span class="st">"date"</span>)  <span class="co"># Adding an element</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fruits)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>apple
-['apple', 'banana', 'cherry', 'date']</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fruits[<span class="dv">0</span>])  <span class="co"># Accessing elements</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>fruits.append(<span class="st">"date"</span>)  <span class="co"># Adding an element</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fruits)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>인덱싱은 값 자체 (1은 두 번째값)</li>
@@ -438,47 +381,29 @@ My name is Alister</code></pre>
 </figure>
 </div>
 <div id="cell-29" class="cell" data-executioninfo="{&quot;elapsed&quot;:575,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716182330447,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="66608a7a-40f0-40af-b879-a63ccd8f9e6c">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)] <span class="co"># 리스트 컴프리헨션</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">0</span>])</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">2</span>:<span class="dv">5</span>])</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">2</span>:<span class="op">-</span><span class="dv">3</span>])</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[:])</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[:<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">1</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-0
-9
-[2, 3, 4]
-[2, 3, 4, 5, 6]
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[0, 1, 2, 3, 4, 5, 6, 7, 8]
-[1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>)] <span class="co"># 리스트 컴프리헨션</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">0</span>])</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">2</span>:<span class="dv">5</span>])</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">2</span>:<span class="op">-</span><span class="dv">3</span>])</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[:])</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">1</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>리스트 데이터 삽입 삭제</li>
 </ul>
 <div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:816,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728319129,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="b976396f-3340-438f-8d7f-b8a4d32a8758">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>geneids.append(<span class="dv">4</span>)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"length: </span><span class="sc">%d</span><span class="st">"</span> <span class="op">%</span> <span class="bu">len</span>(geneids))</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>geneids[<span class="bu">len</span>(geneids):] <span class="op">=</span> [<span class="dv">5</span>]</span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids.pop())</span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1, 2, 3]
-[1, 2, 3, 4]
-length: 4
-[1, 2, 3, 4, 5]
-5
-[1, 2, 3, 4]</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>geneids.append(<span class="dv">4</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"length: </span><span class="sc">%d</span><span class="st">"</span> <span class="op">%</span> <span class="bu">len</span>(geneids))</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>geneids[<span class="bu">len</span>(geneids):] <span class="op">=</span> [<span class="dv">5</span>]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids.pop())</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="tuple-튜플" class="level4" data-number="3.0.6.2">
@@ -489,25 +414,17 @@ length: 4
 <li>리스트보다 빠른 속도, 리스트와 동일한 인덱싱 방법</li>
 </ul>
 <div id="cell-34" class="cell" data-executioninfo="{&quot;elapsed&quot;:1191,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728340551,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="0329cb17-fe47-4735-e5b1-871e791b33a8">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">0</span>:<span class="dv">2</span>])</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co">#geneids[0] = 4 ## error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(1, 2)</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(geneids[<span class="dv">0</span>:<span class="dv">2</span>])</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#geneids[0] = 4 ## error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>반복문에서 리스트 또는 튜플 활용</li>
 </ul>
 <div id="cell-36" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716182545534,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="62f83cf7-076f-40ec-c892-9316f12eb5ac">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> [<span class="st">'123'</span>, <span class="st">'456'</span>, <span class="st">'789'</span>]</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> geneid <span class="kw">in</span> geneids:</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"geneid: </span><span class="sc">{</span>geneid<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>geneid: 123
-geneid: 456
-geneid: 789</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>geneids <span class="op">=</span> [<span class="st">'123'</span>, <span class="st">'456'</span>, <span class="st">'789'</span>]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> geneid <span class="kw">in</span> geneids:</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"geneid: </span><span class="sc">{</span>geneid<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="dictionaries-딕셔너리" class="level4" data-number="3.0.6.3">
@@ -516,94 +433,63 @@ geneid: 789</code></pre>
 <li>Key-value pairs, unordered.</li>
 </ul>
 <div id="cell-38" class="cell" data-outputid="165e9c5e-9237-4f2e-8450-dc6afe50d5db">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>person <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Alice"</span>, <span class="st">"age"</span>: <span class="dv">25</span>}</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person[<span class="st">"name"</span>])</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>person[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">26</span>  <span class="co"># Updating value</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Alice
-{'name': 'Alice', 'age': 26}</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>person <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Alice"</span>, <span class="st">"age"</span>: <span class="dv">25</span>}</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person[<span class="st">"name"</span>])</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>person[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">26</span>  <span class="co"># Updating value</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(person)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>키(key)와 값(value)을 쌍으로 저장, ‘{’와’}’를 사용</li>
 </ul>
 <div id="cell-40" class="cell" data-executioninfo="{&quot;elapsed&quot;:1147,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728349440,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="242e8477-d0f9-42d3-c6e9-f93dea77c72b">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>gene_expr <span class="op">=</span> {}</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>gene_expr[<span class="st">'A'</span>] <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>gene_expr[<span class="st">'B'</span>] <span class="op">=</span> <span class="fl">1.2</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(gene_expr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>{'A': 0.5}
-{'A': 0.5, 'B': 1.2}
-2</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>gene_expr <span class="op">=</span> {}</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>gene_expr[<span class="st">'A'</span>] <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>gene_expr[<span class="st">'B'</span>] <span class="op">=</span> <span class="fl">1.2</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(gene_expr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>인덱싱은 ‘[’, ’]’ 사용, 키 값으로 인덱싱, 정수값 인덱싱 불가</li>
 </ul>
 <div id="cell-42" class="cell" data-executioninfo="{&quot;elapsed&quot;:793,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728361403,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="06a8b765-cd9c-4899-ed93-7c92a27673a4">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr[<span class="st">'A'</span>])</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="co">## gene_expr[0] # error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0.5</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr[<span class="st">'A'</span>])</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">## gene_expr[0] # error</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>데이터 추가는 key값 value값으로 수행, 삭제는 del 함수 이용</li>
 </ul>
 <div id="cell-44" class="cell" data-executioninfo="{&quot;elapsed&quot;:816,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728364824,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="d9f45909-5db1-4701-bad4-a9c4998f4473">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>gene_expr[<span class="st">'C'</span>] <span class="op">=</span> <span class="fl">0.3</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> gene_expr[<span class="st">'C'</span>]</span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>{'A': 0.5, 'B': 1.2, 'C': 0.3}
-{'A': 0.5, 'B': 1.2}</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>gene_expr[<span class="st">'C'</span>] <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> gene_expr[<span class="st">'C'</span>]</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene_expr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>key 값과 value 값 구하기</li>
 </ul>
 <div id="cell-46" class="cell" data-executioninfo="{&quot;elapsed&quot;:1237,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728368596,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="dece1d40-f801-4412-e171-ad578ccf0e55">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>gene_expr_keys <span class="op">=</span> <span class="bu">list</span>(gene_expr.keys())</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"keys:"</span>, gene_expr_keys)</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>gene_expr_values <span class="op">=</span> <span class="bu">list</span>(gene_expr.values())</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"values:"</span>, gene_expr_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>keys: ['A', 'B']
-values: [0.5, 1.2]</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>gene_expr_keys <span class="op">=</span> <span class="bu">list</span>(gene_expr.keys())</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"keys:"</span>, gene_expr_keys)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>gene_expr_values <span class="op">=</span> <span class="bu">list</span>(gene_expr.values())</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"values:"</span>, gene_expr_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>in 활용 키 값 탐색</li>
 </ul>
 <div id="cell-48" class="cell" data-executioninfo="{&quot;elapsed&quot;:1090,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1576728371465,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;photoUrl&quot;:&quot;&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="70d7822c-a62f-42f9-c750-16af15641e12">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'D'</span> <span class="kw">in</span> gene_expr_keys)</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'D'</span> <span class="kw">in</span> gene_expr)</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'A'</span> <span class="kw">in</span> gene_expr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>False
-False
-True</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'D'</span> <span class="kw">in</span> gene_expr_keys)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'D'</span> <span class="kw">in</span> gene_expr)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'A'</span> <span class="kw">in</span> gene_expr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>반복문에서 딕셔너리 활용 items()</li>
 </ul>
 <div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716182722903,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="bd71d2b4-aa1f-4d4c-de51-d9b06bcada36">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>gene_expr <span class="op">=</span> {<span class="st">'A'</span>:<span class="fl">0.5</span>, <span class="st">'B'</span>:<span class="fl">1.2</span>, <span class="st">'C'</span>:<span class="fl">0.3</span>, <span class="st">'D'</span>:<span class="fl">3.2</span>}</span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, val <span class="kw">in</span> gene_expr.items():</span>
-<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> expression value is </span><span class="sc">{</span>val<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print("%s expression value is %s" %(geneid, expval))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>A expression value is 0.5
-B expression value is 1.2
-C expression value is 0.3
-D expression value is 3.2</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>gene_expr <span class="op">=</span> {<span class="st">'A'</span>:<span class="fl">0.5</span>, <span class="st">'B'</span>:<span class="fl">1.2</span>, <span class="st">'C'</span>:<span class="fl">0.3</span>, <span class="st">'D'</span>:<span class="fl">3.2</span>}</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, val <span class="kw">in</span> gene_expr.items():</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss"> expression value is </span><span class="sc">{</span>val<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#print("%s expression value is %s" %(geneid, expval))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -613,23 +499,17 @@ D expression value is 3.2</code></pre>
 <h4 data-number="3.0.7.1" class="anchored" data-anchor-id="importing-modules"><span class="header-section-number">3.0.7.1</span> Importing Modules</h4>
 <p>Using standard libraries.</p>
 <div id="cell-52" class="cell" data-outputid="2c5d6ab6-4f88-4cba-e324-c59a782002c9">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sqrt(<span class="dv">16</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>4.0</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.sqrt(<span class="dv">16</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="importing-specific-functions" class="level4" data-number="3.0.7.2">
 <h4 data-number="3.0.7.2" class="anchored" data-anchor-id="importing-specific-functions"><span class="header-section-number">3.0.7.2</span> Importing Specific Functions</h4>
 <div id="cell-54" class="cell" data-outputid="77d508d8-5cc1-4258-ae53-fc764e8615e7">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>5.0</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sqrt(<span class="dv">25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -638,20 +518,17 @@ D expression value is 3.2</code></pre>
 <section id="writing-to-a-file" class="level4" data-number="3.0.8.1">
 <h4 data-number="3.0.8.1" class="anchored" data-anchor-id="writing-to-a-file"><span class="header-section-number">3.0.8.1</span> Writing to a File</h4>
 <div id="cell-56" class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'example.txt'</span>, <span class="st">'w'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="st">"Hello, World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'example.txt'</span>, <span class="st">'w'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="st">"Hello, World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="reading-from-a-file" class="level4" data-number="3.0.8.2">
 <h4 data-number="3.0.8.2" class="anchored" data-anchor-id="reading-from-a-file"><span class="header-section-number">3.0.8.2</span> Reading from a File</h4>
 <div id="cell-58" class="cell" data-outputid="a43d2a4c-e413-4193-b8c7-6ee714194468">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'example.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    content <span class="op">=</span> <span class="bu">file</span>.read()</span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello, World!</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'example.txt'</span>, <span class="st">'r'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    content <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -659,123 +536,79 @@ D expression value is 3.2</code></pre>
 <h3 data-number="3.0.9" class="anchored" data-anchor-id="example-basic-dna-sequence-manipulation"><span class="header-section-number">3.0.9</span> Example: Basic DNA Sequence Manipulation</h3>
 <p>Let’s put some of these concepts together with a simple example that manipulates a DNA sequence.</p>
 <div id="cell-60" class="cell" data-executioninfo="{&quot;elapsed&quot;:361,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716183577797,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="5d914e20-43fc-4292-cc44-485c7e929321">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a DNA sequence</span></span>
-<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>dna_seq <span class="op">=</span> <span class="st">"ATGCGTACGTAGCTAGCTAG"</span></span>
-<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to compute GC content</span></span>
-<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gc_content(seq):</span>
-<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>    gc_count <span class="op">=</span> seq.count(<span class="st">'G'</span>) <span class="op">+</span> seq.count(<span class="st">'C'</span>)</span>
-<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gc_count <span class="op">/</span> <span class="bu">len</span>(seq) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to get the reverse complement of the sequence</span></span>
-<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reverse_complement(seq):</span>
-<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>    complement <span class="op">=</span> {<span class="st">'A'</span>: <span class="st">'T'</span>, <span class="st">'T'</span>: <span class="st">'A'</span>, <span class="st">'C'</span>: <span class="st">'G'</span>, <span class="st">'G'</span>: <span class="st">'C'</span>}</span>
-<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">''</span>.join(complement[base] <span class="cf">for</span> base <span class="kw">in</span> <span class="bu">reversed</span>(seq))</span>
-<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute GC content</span></span>
-<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>gc <span class="op">=</span> gc_content(dna_seq)</span>
-<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"GC Content: </span><span class="sc">{</span>gc<span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
-<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Get reverse complement</span></span>
-<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a>rev_comp <span class="op">=</span> reverse_complement(dna_seq)</span>
-<span id="cb60-20"><a href="#cb60-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Reverse Complement: </span><span class="sc">{</span>rev_comp<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>GC Content: 50.00%
-Reverse Complement: CTAGCTAGCTACGTACGCAT</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a DNA sequence</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>dna_seq <span class="op">=</span> <span class="st">"ATGCGTACGTAGCTAGCTAG"</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to compute GC content</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gc_content(seq):</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    gc_count <span class="op">=</span> seq.count(<span class="st">'G'</span>) <span class="op">+</span> seq.count(<span class="st">'C'</span>)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gc_count <span class="op">/</span> <span class="bu">len</span>(seq) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to get the reverse complement of the sequence</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reverse_complement(seq):</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    complement <span class="op">=</span> {<span class="st">'A'</span>: <span class="st">'T'</span>, <span class="st">'T'</span>: <span class="st">'A'</span>, <span class="st">'C'</span>: <span class="st">'G'</span>, <span class="st">'G'</span>: <span class="st">'C'</span>}</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">''</span>.join(complement[base] <span class="cf">for</span> base <span class="kw">in</span> <span class="bu">reversed</span>(seq))</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute GC content</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>gc <span class="op">=</span> gc_content(dna_seq)</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"GC Content: </span><span class="sc">{</span>gc<span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Get reverse complement</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>rev_comp <span class="op">=</span> reverse_complement(dna_seq)</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Reverse Complement: </span><span class="sc">{</span>rev_comp<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-61" class="cell" data-executioninfo="{&quot;elapsed&quot;:28,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1716205365369,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="2bff0e53-6cdd-41f4-96e0-ea6638ec75d3">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co">"mystringm"</span>,count(<span class="st">"m"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>NameError: name 'count' is not defined</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">"mystringm"</span>,count(<span class="st">"m"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="string-join-문자열-붙이기" class="level4" data-number="3.0.9.1">
 <h4 data-number="3.0.9.1" class="anchored" data-anchor-id="string-join-문자열-붙이기"><span class="header-section-number">3.0.9.1</span> String join (문자열 붙이기)</h4>
 <div id="cell-63" class="cell" data-executioninfo="{&quot;elapsed&quot;:429,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716205447503,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="682af016-40ce-43d6-87fc-5bcc3b7cdd55">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>seq1 <span class="op">=</span> <span class="st">"ATGC"</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>seq2 <span class="op">=</span> <span class="st">"TAGC"</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>dna_seq <span class="op">=</span> seq1 <span class="op">+</span> seq2</span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna_seq:</span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(base)</span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dna_seq))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>A
-T
-G
-C
-T
-A
-G
-C
-&lt;class 'str'&gt;</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>seq1 <span class="op">=</span> <span class="st">"ATGC"</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>seq2 <span class="op">=</span> <span class="st">"TAGC"</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>dna_seq <span class="op">=</span> seq1 <span class="op">+</span> seq2</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna_seq:</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(base)</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dna_seq))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-64" class="cell" data-executioninfo="{&quot;elapsed&quot;:395,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716205451358,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="ec22d031-2ecb-4d67-9dc4-e51b2985e3fd">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>complement <span class="op">=</span> {<span class="st">'A'</span>: <span class="st">'T'</span>, <span class="st">'T'</span>: <span class="st">'A'</span>, <span class="st">'C'</span>: <span class="st">'G'</span>, <span class="st">'G'</span>: <span class="st">'C'</span>}</span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna_seq:</span>
-<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(complement [base])</span>
-<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>dna_seq_list <span class="op">=</span> []</span>
-<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna_seq:</span>
-<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>  dna_seq_list.append(complement[base])</span>
-<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_list)</span>
-<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dna_seq_list))</span>
-<span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-13"><a href="#cb66-13" aria-hidden="true" tabindex="-1"></a>dna_seq_comp <span class="op">=</span> <span class="st">""</span>.join (dna_seq_list)</span>
-<span id="cb66-14"><a href="#cb66-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_comp)</span>
-<span id="cb66-15"><a href="#cb66-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dna_seq_comp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>T
-A
-C
-G
-A
-T
-C
-G
-['T', 'A', 'C', 'G', 'A', 'T', 'C', 'G']
-&lt;class 'list'&gt;
-TACGATCG
-&lt;class 'str'&gt;</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>complement <span class="op">=</span> {<span class="st">'A'</span>: <span class="st">'T'</span>, <span class="st">'T'</span>: <span class="st">'A'</span>, <span class="st">'C'</span>: <span class="st">'G'</span>, <span class="st">'G'</span>: <span class="st">'C'</span>}</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna_seq:</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(complement [base])</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>dna_seq_list <span class="op">=</span> []</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> base <span class="kw">in</span> dna_seq:</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  dna_seq_list.append(complement[base])</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_list)</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dna_seq_list))</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>dna_seq_comp <span class="op">=</span> <span class="st">""</span>.join (dna_seq_list)</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_comp)</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dna_seq_comp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-65" class="cell" data-executioninfo="{&quot;elapsed&quot;:568,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716205517384,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="c7ed9866-c06d-43ac-82d6-ea2b171e4a0b">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>complement [<span class="st">"C"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>'G'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>complement [<span class="st">"C"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-66" class="cell" data-executioninfo="{&quot;elapsed&quot;:425,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716205552979,&quot;user&quot;:{&quot;displayName&quot;:&quot;유진희&quot;,&quot;userId&quot;:&quot;01982697232922571018&quot;},&quot;user_tz&quot;:-540}" data-outputid="ea52ebf3-539c-4041-9070-6c7901873641">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>dna_seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>'ATGCTAGC'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>dna_seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-67" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716184861236,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="fe1444d0-aa8d-438e-9643-399ee67da954">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>dna_seq_list <span class="op">=</span> [complement[base] <span class="cf">for</span> base <span class="kw">in</span> dna_seq]</span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_list)</span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>dna_seq_comp <span class="op">=</span> <span class="st">""</span>.join(dna_seq_list)</span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_comp)</span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>.join([complement[base] <span class="cf">for</span> base <span class="kw">in</span> dna_seq]))</span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>.join([complement[base] <span class="cf">for</span> base <span class="kw">in</span> dna_seq <span class="cf">if</span> base <span class="op">==</span> <span class="st">"A"</span> <span class="kw">or</span> base <span class="op">==</span> <span class="st">"T"</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>['T', 'A', 'C', 'G', 'A', 'T', 'C', 'G']
-TACGATCG
-TACGATCG
-TAAT</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>dna_seq_list <span class="op">=</span> [complement[base] <span class="cf">for</span> base <span class="kw">in</span> dna_seq]</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_list)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>dna_seq_comp <span class="op">=</span> <span class="st">""</span>.join(dna_seq_list)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dna_seq_comp)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>.join([complement[base] <span class="cf">for</span> base <span class="kw">in</span> dna_seq]))</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>.join([complement[base] <span class="cf">for</span> base <span class="kw">in</span> dna_seq <span class="cf">if</span> base <span class="op">==</span> <span class="st">"A"</span> <span class="kw">or</span> base <span class="op">==</span> <span class="st">"T"</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
-<section id="example-library-generation" class="level3" data-number="3.0.10">
-<h3 data-number="3.0.10" class="anchored" data-anchor-id="example-library-generation"><span class="header-section-number">3.0.10</span> Example: Library generation</h3>
+<section id="example-synonymous-mutant-library-generation" class="level3" data-number="3.0.10">
+<h3 data-number="3.0.10" class="anchored" data-anchor-id="example-synonymous-mutant-library-generation"><span class="header-section-number">3.0.10</span> Example: Synonymous Mutant Library Generation</h3>
 </section>
 <section id="user-1" class="level3" data-number="3.0.11">
 <h3 data-number="3.0.11" class="anchored" data-anchor-id="user-1"><span class="header-section-number">3.0.11</span> [User]</h3>
@@ -792,99 +625,88 @@ TAAT</code></pre>
 <li>Generate all possible synonymous mutants for the target protein.</li>
 </ol>
 <p>Here is the Python code that accomplishes these tasks:</p>
-</section>
-<section id="example-synonymous-mutant-library-generation" class="level3" data-number="3.0.13">
-<h3 data-number="3.0.13" class="anchored" data-anchor-id="example-synonymous-mutant-library-generation"><span class="header-section-number">3.0.13</span> Example: Synonymous Mutant Library Generation</h3>
 <ul>
 <li>이 예제는 위 프롬프트로 ChatGPT가 만든 코드입니다</li>
 </ul>
-<section id="install-necessary-libraries" class="level4" data-number="3.0.13.1">
-<h4 data-number="3.0.13.1" class="anchored" data-anchor-id="install-necessary-libraries"><span class="header-section-number">3.0.13.1</span> Install Necessary Libraries</h4>
+<section id="install-necessary-libraries" class="level4" data-number="3.0.12.1">
+<h4 data-number="3.0.12.1" class="anchored" data-anchor-id="install-necessary-libraries"><span class="header-section-number">3.0.12.1</span> Install Necessary Libraries</h4>
 <p>Make sure you have Biopython installed:</p>
 <div id="cell-72" class="cell" data-executioninfo="{&quot;elapsed&quot;:9477,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716206060464,&quot;user&quot;:{&quot;displayName&quot;:&quot;전혜빈&quot;,&quot;userId&quot;:&quot;16301033361690885088&quot;},&quot;user_tz&quot;:-540}" data-outputid="edcfd578-494d-4a4f-de9f-06cae3478d4b">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install biopython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Collecting biopython
-  Downloading biopython-1.83-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 26.0 MB/s eta 0:00:00
-Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from biopython) (1.25.2)
-Installing collected packages: biopython
-Successfully installed biopython-1.83</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install biopython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="python-script-to-generate-synonymous-mutant-library" class="level4" data-number="3.0.13.2">
-<h4 data-number="3.0.13.2" class="anchored" data-anchor-id="python-script-to-generate-synonymous-mutant-library"><span class="header-section-number">3.0.13.2</span> Python Script to Generate Synonymous Mutant Library</h4>
+<section id="python-script-to-generate-synonymous-mutant-library" class="level4" data-number="3.0.12.2">
+<h4 data-number="3.0.12.2" class="anchored" data-anchor-id="python-script-to-generate-synonymous-mutant-library"><span class="header-section-number">3.0.12.2</span> Python Script to Generate Synonymous Mutant Library</h4>
 <div id="cell-74" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1716206073871,&quot;user&quot;:{&quot;displayName&quot;:&quot;전혜빈&quot;,&quot;userId&quot;:&quot;16301033361690885088&quot;},&quot;user_tz&quot;:-540}" data-outputid="6153acc7-bfff-4916-a5dd-7f201428cac8">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
-<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Synonymous codon table</span></span>
-<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>synonymous_codons <span class="op">=</span> {</span>
-<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'F'</span>: [<span class="st">'TTT'</span>, <span class="st">'TTC'</span>],</span>
-<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L'</span>: [<span class="st">'TTA'</span>, <span class="st">'TTG'</span>, <span class="st">'CTT'</span>, <span class="st">'CTC'</span>, <span class="st">'CTA'</span>, <span class="st">'CTG'</span>],</span>
-<span id="cb76-9"><a href="#cb76-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'I'</span>: [<span class="st">'ATT'</span>, <span class="st">'ATC'</span>, <span class="st">'ATA'</span>],</span>
-<span id="cb76-10"><a href="#cb76-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'M'</span>: [<span class="st">'ATG'</span>],</span>
-<span id="cb76-11"><a href="#cb76-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'V'</span>: [<span class="st">'GTT'</span>, <span class="st">'GTC'</span>, <span class="st">'GTA'</span>, <span class="st">'GTG'</span>],</span>
-<span id="cb76-12"><a href="#cb76-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'S'</span>: [<span class="st">'TCT'</span>, <span class="st">'TCC'</span>, <span class="st">'TCA'</span>, <span class="st">'TCG'</span>, <span class="st">'AGT'</span>, <span class="st">'AGC'</span>],</span>
-<span id="cb76-13"><a href="#cb76-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'P'</span>: [<span class="st">'CCT'</span>, <span class="st">'CCC'</span>, <span class="st">'CCA'</span>, <span class="st">'CCG'</span>],</span>
-<span id="cb76-14"><a href="#cb76-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T'</span>: [<span class="st">'ACT'</span>, <span class="st">'ACC'</span>, <span class="st">'ACA'</span>, <span class="st">'ACG'</span>],</span>
-<span id="cb76-15"><a href="#cb76-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'A'</span>: [<span class="st">'GCT'</span>, <span class="st">'GCC'</span>, <span class="st">'GCA'</span>, <span class="st">'GCG'</span>],</span>
-<span id="cb76-16"><a href="#cb76-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Y'</span>: [<span class="st">'TAT'</span>, <span class="st">'TAC'</span>],</span>
-<span id="cb76-17"><a href="#cb76-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H'</span>: [<span class="st">'CAT'</span>, <span class="st">'CAC'</span>],</span>
-<span id="cb76-18"><a href="#cb76-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Q'</span>: [<span class="st">'CAA'</span>, <span class="st">'CAG'</span>],</span>
-<span id="cb76-19"><a href="#cb76-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'N'</span>: [<span class="st">'AAT'</span>, <span class="st">'AAC'</span>],</span>
-<span id="cb76-20"><a href="#cb76-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'K'</span>: [<span class="st">'AAA'</span>, <span class="st">'AAG'</span>],</span>
-<span id="cb76-21"><a href="#cb76-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'D'</span>: [<span class="st">'GAT'</span>, <span class="st">'GAC'</span>],</span>
-<span id="cb76-22"><a href="#cb76-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E'</span>: [<span class="st">'GAA'</span>, <span class="st">'GAG'</span>],</span>
-<span id="cb76-23"><a href="#cb76-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'C'</span>: [<span class="st">'TGT'</span>, <span class="st">'TGC'</span>],</span>
-<span id="cb76-24"><a href="#cb76-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'W'</span>: [<span class="st">'TGG'</span>],</span>
-<span id="cb76-25"><a href="#cb76-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: [<span class="st">'CGT'</span>, <span class="st">'CGC'</span>, <span class="st">'CGA'</span>, <span class="st">'CGG'</span>, <span class="st">'AGA'</span>, <span class="st">'AGG'</span>],</span>
-<span id="cb76-26"><a href="#cb76-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'G'</span>: [<span class="st">'GGT'</span>, <span class="st">'GGC'</span>, <span class="st">'GGA'</span>, <span class="st">'GGG'</span>],</span>
-<span id="cb76-27"><a href="#cb76-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'*'</span>: [<span class="st">'TAA'</span>, <span class="st">'TAG'</span>, <span class="st">'TGA'</span>]</span>
-<span id="cb76-28"><a href="#cb76-28" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb76-29"><a href="#cb76-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-30"><a href="#cb76-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to read the GenBank file and extract the coding sequence</span></span>
-<span id="cb76-31"><a href="#cb76-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_cds_from_genbank(file_path):</span>
-<span id="cb76-32"><a href="#cb76-32" aria-hidden="true" tabindex="-1"></a>    record <span class="op">=</span> SeqIO.read(file_path, <span class="st">"genbank"</span>)</span>
-<span id="cb76-33"><a href="#cb76-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> feature <span class="kw">in</span> record.features:</span>
-<span id="cb76-34"><a href="#cb76-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> feature.<span class="bu">type</span> <span class="op">==</span> <span class="st">"CDS"</span>:</span>
-<span id="cb76-35"><a href="#cb76-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> feature.location.extract(record).seq</span>
-<span id="cb76-36"><a href="#cb76-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"No CDS found in the GenBank file."</span>)</span>
-<span id="cb76-37"><a href="#cb76-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-38"><a href="#cb76-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to generate synonymous mutants</span></span>
-<span id="cb76-39"><a href="#cb76-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_synonymous_mutants(cds_seq):</span>
-<span id="cb76-40"><a href="#cb76-40" aria-hidden="true" tabindex="-1"></a>    protein_seq <span class="op">=</span> cds_seq.translate()</span>
-<span id="cb76-41"><a href="#cb76-41" aria-hidden="true" tabindex="-1"></a>    codon_options <span class="op">=</span> []</span>
-<span id="cb76-42"><a href="#cb76-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-43"><a href="#cb76-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> aa <span class="kw">in</span> protein_seq[:<span class="dv">5</span>]:</span>
-<span id="cb76-44"><a href="#cb76-44" aria-hidden="true" tabindex="-1"></a>        codons <span class="op">=</span> synonymous_codons.get(aa, [])</span>
-<span id="cb76-45"><a href="#cb76-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> codons:</span>
-<span id="cb76-46"><a href="#cb76-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unknown amino acid </span><span class="sc">{</span>aa<span class="sc">}</span><span class="ss"> encountered."</span>)</span>
-<span id="cb76-47"><a href="#cb76-47" aria-hidden="true" tabindex="-1"></a>        codon_options.append(codons)</span>
-<span id="cb76-48"><a href="#cb76-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-49"><a href="#cb76-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate all combinations of synonymous codons</span></span>
-<span id="cb76-50"><a href="#cb76-50" aria-hidden="true" tabindex="-1"></a>    all_mutants <span class="op">=</span> <span class="bu">list</span>(product(<span class="op">*</span>codon_options))</span>
-<span id="cb76-51"><a href="#cb76-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="st">''</span>.join(mutant) <span class="cf">for</span> mutant <span class="kw">in</span> all_mutants]</span>
-<span id="cb76-52"><a href="#cb76-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-53"><a href="#cb76-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function</span></span>
-<span id="cb76-54"><a href="#cb76-54" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main(genbank_file, output_file):</span>
-<span id="cb76-55"><a href="#cb76-55" aria-hidden="true" tabindex="-1"></a>    cds_seq <span class="op">=</span> read_cds_from_genbank(genbank_file)</span>
-<span id="cb76-56"><a href="#cb76-56" aria-hidden="true" tabindex="-1"></a>    mutants <span class="op">=</span> generate_synonymous_mutants(cds_seq)</span>
-<span id="cb76-57"><a href="#cb76-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-58"><a href="#cb76-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write the mutants to a FASTA file</span></span>
-<span id="cb76-59"><a href="#cb76-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
-<span id="cb76-60"><a href="#cb76-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, mutant <span class="kw">in</span> <span class="bu">enumerate</span>(mutants):</span>
-<span id="cb76-61"><a href="#cb76-61" aria-hidden="true" tabindex="-1"></a>            f.write(<span class="ss">f"&gt;Mutant_</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>mutant<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
-<span id="cb76-62"><a href="#cb76-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-63"><a href="#cb76-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
-<span id="cb76-64"><a href="#cb76-64" aria-hidden="true" tabindex="-1"></a>genbank_file <span class="op">=</span> <span class="st">'egfp.gb'</span>  <span class="co"># Replace with your GenBank file path</span></span>
-<span id="cb76-65"><a href="#cb76-65" aria-hidden="true" tabindex="-1"></a>output_file <span class="op">=</span> <span class="st">'mutant_library.fasta'</span></span>
-<span id="cb76-66"><a href="#cb76-66" aria-hidden="true" tabindex="-1"></a>main(genbank_file, output_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Synonymous codon table</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>synonymous_codons <span class="op">=</span> {</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'F'</span>: [<span class="st">'TTT'</span>, <span class="st">'TTC'</span>],</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L'</span>: [<span class="st">'TTA'</span>, <span class="st">'TTG'</span>, <span class="st">'CTT'</span>, <span class="st">'CTC'</span>, <span class="st">'CTA'</span>, <span class="st">'CTG'</span>],</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'I'</span>: [<span class="st">'ATT'</span>, <span class="st">'ATC'</span>, <span class="st">'ATA'</span>],</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'M'</span>: [<span class="st">'ATG'</span>],</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'V'</span>: [<span class="st">'GTT'</span>, <span class="st">'GTC'</span>, <span class="st">'GTA'</span>, <span class="st">'GTG'</span>],</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'S'</span>: [<span class="st">'TCT'</span>, <span class="st">'TCC'</span>, <span class="st">'TCA'</span>, <span class="st">'TCG'</span>, <span class="st">'AGT'</span>, <span class="st">'AGC'</span>],</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'P'</span>: [<span class="st">'CCT'</span>, <span class="st">'CCC'</span>, <span class="st">'CCA'</span>, <span class="st">'CCG'</span>],</span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T'</span>: [<span class="st">'ACT'</span>, <span class="st">'ACC'</span>, <span class="st">'ACA'</span>, <span class="st">'ACG'</span>],</span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'A'</span>: [<span class="st">'GCT'</span>, <span class="st">'GCC'</span>, <span class="st">'GCA'</span>, <span class="st">'GCG'</span>],</span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Y'</span>: [<span class="st">'TAT'</span>, <span class="st">'TAC'</span>],</span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H'</span>: [<span class="st">'CAT'</span>, <span class="st">'CAC'</span>],</span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Q'</span>: [<span class="st">'CAA'</span>, <span class="st">'CAG'</span>],</span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'N'</span>: [<span class="st">'AAT'</span>, <span class="st">'AAC'</span>],</span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'K'</span>: [<span class="st">'AAA'</span>, <span class="st">'AAG'</span>],</span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'D'</span>: [<span class="st">'GAT'</span>, <span class="st">'GAC'</span>],</span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E'</span>: [<span class="st">'GAA'</span>, <span class="st">'GAG'</span>],</span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'C'</span>: [<span class="st">'TGT'</span>, <span class="st">'TGC'</span>],</span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'W'</span>: [<span class="st">'TGG'</span>],</span>
+<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: [<span class="st">'CGT'</span>, <span class="st">'CGC'</span>, <span class="st">'CGA'</span>, <span class="st">'CGG'</span>, <span class="st">'AGA'</span>, <span class="st">'AGG'</span>],</span>
+<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'G'</span>: [<span class="st">'GGT'</span>, <span class="st">'GGC'</span>, <span class="st">'GGA'</span>, <span class="st">'GGG'</span>],</span>
+<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'*'</span>: [<span class="st">'TAA'</span>, <span class="st">'TAG'</span>, <span class="st">'TGA'</span>]</span>
+<span id="cb39-28"><a href="#cb39-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb39-29"><a href="#cb39-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-30"><a href="#cb39-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to read the GenBank file and extract the coding sequence</span></span>
+<span id="cb39-31"><a href="#cb39-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_cds_from_genbank(file_path):</span>
+<span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a>    record <span class="op">=</span> SeqIO.read(file_path, <span class="st">"genbank"</span>)</span>
+<span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> feature <span class="kw">in</span> record.features:</span>
+<span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> feature.<span class="bu">type</span> <span class="op">==</span> <span class="st">"CDS"</span>:</span>
+<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> feature.location.extract(record).seq</span>
+<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"No CDS found in the GenBank file."</span>)</span>
+<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to generate synonymous mutants</span></span>
+<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_synonymous_mutants(cds_seq):</span>
+<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a>    protein_seq <span class="op">=</span> cds_seq.translate()</span>
+<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a>    codon_options <span class="op">=</span> []</span>
+<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> aa <span class="kw">in</span> protein_seq[:<span class="dv">5</span>]:</span>
+<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a>        codons <span class="op">=</span> synonymous_codons.get(aa, [])</span>
+<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> codons:</span>
+<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unknown amino acid </span><span class="sc">{</span>aa<span class="sc">}</span><span class="ss"> encountered."</span>)</span>
+<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a>        codon_options.append(codons)</span>
+<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate all combinations of synonymous codons</span></span>
+<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a>    all_mutants <span class="op">=</span> <span class="bu">list</span>(product(<span class="op">*</span>codon_options))</span>
+<span id="cb39-51"><a href="#cb39-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="st">''</span>.join(mutant) <span class="cf">for</span> mutant <span class="kw">in</span> all_mutants]</span>
+<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function</span></span>
+<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main(genbank_file, output_file):</span>
+<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a>    cds_seq <span class="op">=</span> read_cds_from_genbank(genbank_file)</span>
+<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a>    mutants <span class="op">=</span> generate_synonymous_mutants(cds_seq)</span>
+<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write the mutants to a FASTA file</span></span>
+<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
+<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, mutant <span class="kw">in</span> <span class="bu">enumerate</span>(mutants):</span>
+<span id="cb39-61"><a href="#cb39-61" aria-hidden="true" tabindex="-1"></a>            f.write(<span class="ss">f"&gt;Mutant_</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>mutant<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-63"><a href="#cb39-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
+<span id="cb39-64"><a href="#cb39-64" aria-hidden="true" tabindex="-1"></a>genbank_file <span class="op">=</span> <span class="st">'egfp.gb'</span>  <span class="co"># Replace with your GenBank file path</span></span>
+<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a>output_file <span class="op">=</span> <span class="st">'mutant_library.fasta'</span></span>
+<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a>main(genbank_file, output_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>위 코드를 두 개의 파일로 나누어 모듈 실습</li>
+<li>위 코드를 두 개의 파일로 나누어 (함수모음 파일, 실행 파일) 모듈 실습 가능</li>
 </ul>
 
 
