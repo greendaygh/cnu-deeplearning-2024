@@ -191,9 +191,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#modules-and-packages" id="toc-modules-and-packages" class="nav-link" data-scroll-target="#modules-and-packages"><span class="header-section-number">3.0.7</span> 5. Modules and Packages</a></li>
   <li><a href="#file-io" id="toc-file-io" class="nav-link" data-scroll-target="#file-io"><span class="header-section-number">3.0.8</span> 6. File I/O</a></li>
   <li><a href="#example-basic-dna-sequence-manipulation" id="toc-example-basic-dna-sequence-manipulation" class="nav-link" data-scroll-target="#example-basic-dna-sequence-manipulation"><span class="header-section-number">3.0.9</span> Example: Basic DNA Sequence Manipulation</a></li>
-  <li><a href="#example-synonymous-mutant-library-generation" id="toc-example-synonymous-mutant-library-generation" class="nav-link" data-scroll-target="#example-synonymous-mutant-library-generation"><span class="header-section-number">3.0.10</span> Example: Synonymous Mutant Library Generation</a></li>
-  <li><a href="#user-1" id="toc-user-1" class="nav-link" data-scroll-target="#user-1"><span class="header-section-number">3.0.11</span> [User]</a></li>
-  <li><a href="#chatgpt-1" id="toc-chatgpt-1" class="nav-link" data-scroll-target="#chatgpt-1"><span class="header-section-number">3.0.12</span> [ChatGPT]</a></li>
+  <li><a href="#파이썬-함수-모듈-클래스" id="toc-파이썬-함수-모듈-클래스" class="nav-link" data-scroll-target="#파이썬-함수-모듈-클래스"><span class="header-section-number">3.1</span> 파이썬 함수, 모듈, 클래스</a>
+  <ul class="collapse">
+  <li><a href="#함수" id="toc-함수" class="nav-link" data-scroll-target="#함수"><span class="header-section-number">3.1.1</span> 함수</a></li>
+  <li><a href="#모듈" id="toc-모듈" class="nav-link" data-scroll-target="#모듈"><span class="header-section-number">3.1.2</span> 모듈</a></li>
+  <li><a href="#클래스" id="toc-클래스" class="nav-link" data-scroll-target="#클래스"><span class="header-section-number">3.1.3</span> 클래스</a></li>
+  </ul></li>
+  <li><a href="#example-synonymous-mutant-library-generation" id="toc-example-synonymous-mutant-library-generation" class="nav-link" data-scroll-target="#example-synonymous-mutant-library-generation"><span class="header-section-number">3.2</span> Example: Synonymous Mutant Library Generation</a>
+  <ul class="collapse">
+  <li><a href="#user-1" id="toc-user-1" class="nav-link" data-scroll-target="#user-1"><span class="header-section-number">3.2.1</span> [User]</a></li>
+  <li><a href="#chatgpt-1" id="toc-chatgpt-1" class="nav-link" data-scroll-target="#chatgpt-1"><span class="header-section-number">3.2.2</span> [ChatGPT]</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -607,16 +615,137 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="example-synonymous-mutant-library-generation" class="level3" data-number="3.0.10">
-<h3 data-number="3.0.10" class="anchored" data-anchor-id="example-synonymous-mutant-library-generation"><span class="header-section-number">3.0.10</span> Example: Synonymous Mutant Library Generation</h3>
+<section id="파이썬-함수-모듈-클래스" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="파이썬-함수-모듈-클래스"><span class="header-section-number">3.1</span> 파이썬 함수, 모듈, 클래스</h2>
+<section id="함수" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="함수"><span class="header-section-number">3.1.1</span> 함수</h3>
+<ul>
+<li>리스트 값 평균 리턴하는 함수</li>
+</ul>
+<div id="cell-70" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> average(<span class="bu">input</span>):</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(<span class="bu">input</span>) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="bu">input</span>) <span class="op">/</span> <span class="bu">len</span>(<span class="bu">input</span>)</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>]</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(average(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5.5</code></pre>
+</div>
+</div>
 </section>
-<section id="user-1" class="level3" data-number="3.0.11">
-<h3 data-number="3.0.11" class="anchored" data-anchor-id="user-1"><span class="header-section-number">3.0.11</span> [User]</h3>
+<section id="모듈" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="모듈"><span class="header-section-number">3.1.2</span> 모듈</h3>
+<ul>
+<li>위 average 함수를 mystat.py 라는 이름의 파일로 저장, 모듈로 활용</li>
+</ul>
+<div id="cell-72" class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#import mystat</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x = list(range(10))</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co">#print(mystat.average(x))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>모듈 직접 실행시 모듈 내 test 코드 실행 (<strong>name</strong> == <strong>main</strong>, True)</li>
+</ul>
+<div id="cell-74" class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#%run mystat</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>모듈 임포트</li>
+</ul>
+<div id="cell-76" class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>os.getcwd()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>'/content'</code></pre>
+</div>
+</div>
+<div id="cell-77" class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> os <span class="im">import</span> getcwd</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>getcwd()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<pre><code>'/home/bioengml'</code></pre>
+</div>
+</div>
+</section>
+<section id="클래스" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="클래스"><span class="header-section-number">3.1.3</span> 클래스</h3>
+<ul>
+<li>Gene, Strain class 생성 연습</li>
+<li>Gene attribute: name, chromosomal location, length<br>
+</li>
+<li>Strain attribute (변수): name, length of chromosome<br>
+</li>
+<li>Strain method (함수): compute average length of the genes</li>
+</ul>
+<div id="cell-79" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statistics</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ORF:</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, location, length, seq):</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.location <span class="op">=</span> location</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.length <span class="op">=</span> length</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.sequence <span class="op">=</span> seq</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Strain:</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, chrlength):</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.chr_length <span class="op">=</span> chrlength</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.orfs <span class="op">=</span> []</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add_orf(<span class="va">self</span>, location, length, seq):</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.orfs.append(ORF(location, length, seq))</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> orf_length_average(<span class="va">self</span>):</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> statistics.mean([s.length <span class="cf">for</span> s <span class="kw">in</span> <span class="va">self</span>.orfs])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-80" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>ecoli <span class="op">=</span> Strain(<span class="st">"ecoli"</span>, <span class="dv">5000000</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>ecoli.add_orf(<span class="dv">1</span>, <span class="dv">1000</span>, <span class="st">"ATG"</span>)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>ecoli.add_orf(<span class="dv">1001</span>, <span class="dv">2000</span>, <span class="st">"CCT"</span>)</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>ecoli.add_orf(<span class="dv">2001</span>, <span class="dv">3000</span>, <span class="st">"ATC"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-81" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([g.location <span class="cf">for</span> g <span class="kw">in</span> ecoli.orfs])</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([g.sequence <span class="cf">for</span> g <span class="kw">in</span> ecoli.orfs])</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>ecoli.orf_length_average()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 1001, 2001]
+['ATG', 'CCT', 'ATC']</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>2000</code></pre>
+</div>
+</div>
+<ul>
+<li>상속</li>
+</ul>
+<div id="cell-83" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Gene(ORF):</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add_protein(<span class="va">self</span>, prot_name, prot_seq):</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.prot_name <span class="op">=</span> prot_name</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.prot_sequence <span class="op">=</span> prot_seq</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>        </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-84" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>gene1 <span class="op">=</span> Gene(<span class="dv">1</span>, <span class="dv">1000</span>, <span class="st">"ATG"</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene1.location)</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>gene1.add_protein(<span class="st">"myprotein"</span>, <span class="st">"M"</span>)</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gene1.prot_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1
+myprotein</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="example-synonymous-mutant-library-generation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="example-synonymous-mutant-library-generation"><span class="header-section-number">3.2</span> Example: Synonymous Mutant Library Generation</h2>
+<section id="user-1" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="user-1"><span class="header-section-number">3.2.1</span> [User]</h3>
 <span style="color:blue; font-size: 20px"> I want to generate mutant library of a protein. I have a nucleotide genbank file for the target protein. I wan to generate all the mutants by changing synonymous codons for each residue. can you give me the python code?
 
 </span></section>
-<section id="chatgpt-1" class="level3" data-number="3.0.12">
-<h3 data-number="3.0.12" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">3.0.12</span> [ChatGPT]</h3>
+<section id="chatgpt-1" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">3.2.2</span> [ChatGPT]</h3>
 <p>Certainly! To generate a mutant library by changing synonymous codons for each residue of a protein, we’ll need to:</p>
 <ol type="1">
 <li>Read the nucleotide sequence from a GenBank file.</li>
@@ -628,88 +757,89 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>이 예제는 위 프롬프트로 ChatGPT가 만든 코드입니다</li>
 </ul>
-<section id="install-necessary-libraries" class="level4" data-number="3.0.12.1">
-<h4 data-number="3.0.12.1" class="anchored" data-anchor-id="install-necessary-libraries"><span class="header-section-number">3.0.12.1</span> Install Necessary Libraries</h4>
+<section id="install-necessary-libraries" class="level4" data-number="3.2.2.1">
+<h4 data-number="3.2.2.1" class="anchored" data-anchor-id="install-necessary-libraries"><span class="header-section-number">3.2.2.1</span> Install Necessary Libraries</h4>
 <p>Make sure you have Biopython installed:</p>
-<div id="cell-72" class="cell" data-executioninfo="{&quot;elapsed&quot;:9477,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716206060464,&quot;user&quot;:{&quot;displayName&quot;:&quot;전혜빈&quot;,&quot;userId&quot;:&quot;16301033361690885088&quot;},&quot;user_tz&quot;:-540}" data-outputid="edcfd578-494d-4a4f-de9f-06cae3478d4b">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install biopython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-89" class="cell" data-executioninfo="{&quot;elapsed&quot;:9477,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716206060464,&quot;user&quot;:{&quot;displayName&quot;:&quot;전혜빈&quot;,&quot;userId&quot;:&quot;16301033361690885088&quot;},&quot;user_tz&quot;:-540}" data-outputid="edcfd578-494d-4a4f-de9f-06cae3478d4b">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install biopython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="python-script-to-generate-synonymous-mutant-library" class="level4" data-number="3.0.12.2">
-<h4 data-number="3.0.12.2" class="anchored" data-anchor-id="python-script-to-generate-synonymous-mutant-library"><span class="header-section-number">3.0.12.2</span> Python Script to Generate Synonymous Mutant Library</h4>
-<div id="cell-74" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1716206073871,&quot;user&quot;:{&quot;displayName&quot;:&quot;전혜빈&quot;,&quot;userId&quot;:&quot;16301033361690885088&quot;},&quot;user_tz&quot;:-540}" data-outputid="6153acc7-bfff-4916-a5dd-7f201428cac8">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Synonymous codon table</span></span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>synonymous_codons <span class="op">=</span> {</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'F'</span>: [<span class="st">'TTT'</span>, <span class="st">'TTC'</span>],</span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L'</span>: [<span class="st">'TTA'</span>, <span class="st">'TTG'</span>, <span class="st">'CTT'</span>, <span class="st">'CTC'</span>, <span class="st">'CTA'</span>, <span class="st">'CTG'</span>],</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'I'</span>: [<span class="st">'ATT'</span>, <span class="st">'ATC'</span>, <span class="st">'ATA'</span>],</span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'M'</span>: [<span class="st">'ATG'</span>],</span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'V'</span>: [<span class="st">'GTT'</span>, <span class="st">'GTC'</span>, <span class="st">'GTA'</span>, <span class="st">'GTG'</span>],</span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'S'</span>: [<span class="st">'TCT'</span>, <span class="st">'TCC'</span>, <span class="st">'TCA'</span>, <span class="st">'TCG'</span>, <span class="st">'AGT'</span>, <span class="st">'AGC'</span>],</span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'P'</span>: [<span class="st">'CCT'</span>, <span class="st">'CCC'</span>, <span class="st">'CCA'</span>, <span class="st">'CCG'</span>],</span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T'</span>: [<span class="st">'ACT'</span>, <span class="st">'ACC'</span>, <span class="st">'ACA'</span>, <span class="st">'ACG'</span>],</span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'A'</span>: [<span class="st">'GCT'</span>, <span class="st">'GCC'</span>, <span class="st">'GCA'</span>, <span class="st">'GCG'</span>],</span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Y'</span>: [<span class="st">'TAT'</span>, <span class="st">'TAC'</span>],</span>
-<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H'</span>: [<span class="st">'CAT'</span>, <span class="st">'CAC'</span>],</span>
-<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Q'</span>: [<span class="st">'CAA'</span>, <span class="st">'CAG'</span>],</span>
-<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'N'</span>: [<span class="st">'AAT'</span>, <span class="st">'AAC'</span>],</span>
-<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'K'</span>: [<span class="st">'AAA'</span>, <span class="st">'AAG'</span>],</span>
-<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'D'</span>: [<span class="st">'GAT'</span>, <span class="st">'GAC'</span>],</span>
-<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E'</span>: [<span class="st">'GAA'</span>, <span class="st">'GAG'</span>],</span>
-<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'C'</span>: [<span class="st">'TGT'</span>, <span class="st">'TGC'</span>],</span>
-<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'W'</span>: [<span class="st">'TGG'</span>],</span>
-<span id="cb39-25"><a href="#cb39-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: [<span class="st">'CGT'</span>, <span class="st">'CGC'</span>, <span class="st">'CGA'</span>, <span class="st">'CGG'</span>, <span class="st">'AGA'</span>, <span class="st">'AGG'</span>],</span>
-<span id="cb39-26"><a href="#cb39-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'G'</span>: [<span class="st">'GGT'</span>, <span class="st">'GGC'</span>, <span class="st">'GGA'</span>, <span class="st">'GGG'</span>],</span>
-<span id="cb39-27"><a href="#cb39-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'*'</span>: [<span class="st">'TAA'</span>, <span class="st">'TAG'</span>, <span class="st">'TGA'</span>]</span>
-<span id="cb39-28"><a href="#cb39-28" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb39-29"><a href="#cb39-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-30"><a href="#cb39-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to read the GenBank file and extract the coding sequence</span></span>
-<span id="cb39-31"><a href="#cb39-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_cds_from_genbank(file_path):</span>
-<span id="cb39-32"><a href="#cb39-32" aria-hidden="true" tabindex="-1"></a>    record <span class="op">=</span> SeqIO.read(file_path, <span class="st">"genbank"</span>)</span>
-<span id="cb39-33"><a href="#cb39-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> feature <span class="kw">in</span> record.features:</span>
-<span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> feature.<span class="bu">type</span> <span class="op">==</span> <span class="st">"CDS"</span>:</span>
-<span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> feature.location.extract(record).seq</span>
-<span id="cb39-36"><a href="#cb39-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"No CDS found in the GenBank file."</span>)</span>
-<span id="cb39-37"><a href="#cb39-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-38"><a href="#cb39-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to generate synonymous mutants</span></span>
-<span id="cb39-39"><a href="#cb39-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_synonymous_mutants(cds_seq):</span>
-<span id="cb39-40"><a href="#cb39-40" aria-hidden="true" tabindex="-1"></a>    protein_seq <span class="op">=</span> cds_seq.translate()</span>
-<span id="cb39-41"><a href="#cb39-41" aria-hidden="true" tabindex="-1"></a>    codon_options <span class="op">=</span> []</span>
-<span id="cb39-42"><a href="#cb39-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-43"><a href="#cb39-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> aa <span class="kw">in</span> protein_seq[:<span class="dv">5</span>]:</span>
-<span id="cb39-44"><a href="#cb39-44" aria-hidden="true" tabindex="-1"></a>        codons <span class="op">=</span> synonymous_codons.get(aa, [])</span>
-<span id="cb39-45"><a href="#cb39-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> codons:</span>
-<span id="cb39-46"><a href="#cb39-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unknown amino acid </span><span class="sc">{</span>aa<span class="sc">}</span><span class="ss"> encountered."</span>)</span>
-<span id="cb39-47"><a href="#cb39-47" aria-hidden="true" tabindex="-1"></a>        codon_options.append(codons)</span>
-<span id="cb39-48"><a href="#cb39-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-49"><a href="#cb39-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate all combinations of synonymous codons</span></span>
-<span id="cb39-50"><a href="#cb39-50" aria-hidden="true" tabindex="-1"></a>    all_mutants <span class="op">=</span> <span class="bu">list</span>(product(<span class="op">*</span>codon_options))</span>
-<span id="cb39-51"><a href="#cb39-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="st">''</span>.join(mutant) <span class="cf">for</span> mutant <span class="kw">in</span> all_mutants]</span>
-<span id="cb39-52"><a href="#cb39-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-53"><a href="#cb39-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function</span></span>
-<span id="cb39-54"><a href="#cb39-54" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main(genbank_file, output_file):</span>
-<span id="cb39-55"><a href="#cb39-55" aria-hidden="true" tabindex="-1"></a>    cds_seq <span class="op">=</span> read_cds_from_genbank(genbank_file)</span>
-<span id="cb39-56"><a href="#cb39-56" aria-hidden="true" tabindex="-1"></a>    mutants <span class="op">=</span> generate_synonymous_mutants(cds_seq)</span>
-<span id="cb39-57"><a href="#cb39-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-58"><a href="#cb39-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write the mutants to a FASTA file</span></span>
-<span id="cb39-59"><a href="#cb39-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
-<span id="cb39-60"><a href="#cb39-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, mutant <span class="kw">in</span> <span class="bu">enumerate</span>(mutants):</span>
-<span id="cb39-61"><a href="#cb39-61" aria-hidden="true" tabindex="-1"></a>            f.write(<span class="ss">f"&gt;Mutant_</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>mutant<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
-<span id="cb39-62"><a href="#cb39-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-63"><a href="#cb39-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
-<span id="cb39-64"><a href="#cb39-64" aria-hidden="true" tabindex="-1"></a>genbank_file <span class="op">=</span> <span class="st">'egfp.gb'</span>  <span class="co"># Replace with your GenBank file path</span></span>
-<span id="cb39-65"><a href="#cb39-65" aria-hidden="true" tabindex="-1"></a>output_file <span class="op">=</span> <span class="st">'mutant_library.fasta'</span></span>
-<span id="cb39-66"><a href="#cb39-66" aria-hidden="true" tabindex="-1"></a>main(genbank_file, output_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="python-script-to-generate-synonymous-mutant-library" class="level4" data-number="3.2.2.2">
+<h4 data-number="3.2.2.2" class="anchored" data-anchor-id="python-script-to-generate-synonymous-mutant-library"><span class="header-section-number">3.2.2.2</span> Python Script to Generate Synonymous Mutant Library</h4>
+<div id="cell-91" class="cell" data-executioninfo="{&quot;elapsed&quot;:12,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1716206073871,&quot;user&quot;:{&quot;displayName&quot;:&quot;전혜빈&quot;,&quot;userId&quot;:&quot;16301033361690885088&quot;},&quot;user_tz&quot;:-540}" data-outputid="6153acc7-bfff-4916-a5dd-7f201428cac8">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> itertools <span class="im">import</span> product</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Synonymous codon table</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>synonymous_codons <span class="op">=</span> {</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'F'</span>: [<span class="st">'TTT'</span>, <span class="st">'TTC'</span>],</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'L'</span>: [<span class="st">'TTA'</span>, <span class="st">'TTG'</span>, <span class="st">'CTT'</span>, <span class="st">'CTC'</span>, <span class="st">'CTA'</span>, <span class="st">'CTG'</span>],</span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'I'</span>: [<span class="st">'ATT'</span>, <span class="st">'ATC'</span>, <span class="st">'ATA'</span>],</span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'M'</span>: [<span class="st">'ATG'</span>],</span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'V'</span>: [<span class="st">'GTT'</span>, <span class="st">'GTC'</span>, <span class="st">'GTA'</span>, <span class="st">'GTG'</span>],</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'S'</span>: [<span class="st">'TCT'</span>, <span class="st">'TCC'</span>, <span class="st">'TCA'</span>, <span class="st">'TCG'</span>, <span class="st">'AGT'</span>, <span class="st">'AGC'</span>],</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'P'</span>: [<span class="st">'CCT'</span>, <span class="st">'CCC'</span>, <span class="st">'CCA'</span>, <span class="st">'CCG'</span>],</span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'T'</span>: [<span class="st">'ACT'</span>, <span class="st">'ACC'</span>, <span class="st">'ACA'</span>, <span class="st">'ACG'</span>],</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'A'</span>: [<span class="st">'GCT'</span>, <span class="st">'GCC'</span>, <span class="st">'GCA'</span>, <span class="st">'GCG'</span>],</span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Y'</span>: [<span class="st">'TAT'</span>, <span class="st">'TAC'</span>],</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'H'</span>: [<span class="st">'CAT'</span>, <span class="st">'CAC'</span>],</span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Q'</span>: [<span class="st">'CAA'</span>, <span class="st">'CAG'</span>],</span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'N'</span>: [<span class="st">'AAT'</span>, <span class="st">'AAC'</span>],</span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'K'</span>: [<span class="st">'AAA'</span>, <span class="st">'AAG'</span>],</span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'D'</span>: [<span class="st">'GAT'</span>, <span class="st">'GAC'</span>],</span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'E'</span>: [<span class="st">'GAA'</span>, <span class="st">'GAG'</span>],</span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'C'</span>: [<span class="st">'TGT'</span>, <span class="st">'TGC'</span>],</span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'W'</span>: [<span class="st">'TGG'</span>],</span>
+<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'R'</span>: [<span class="st">'CGT'</span>, <span class="st">'CGC'</span>, <span class="st">'CGA'</span>, <span class="st">'CGG'</span>, <span class="st">'AGA'</span>, <span class="st">'AGG'</span>],</span>
+<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'G'</span>: [<span class="st">'GGT'</span>, <span class="st">'GGC'</span>, <span class="st">'GGA'</span>, <span class="st">'GGG'</span>],</span>
+<span id="cb55-27"><a href="#cb55-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'*'</span>: [<span class="st">'TAA'</span>, <span class="st">'TAG'</span>, <span class="st">'TGA'</span>]</span>
+<span id="cb55-28"><a href="#cb55-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb55-29"><a href="#cb55-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-30"><a href="#cb55-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to read the GenBank file and extract the coding sequence</span></span>
+<span id="cb55-31"><a href="#cb55-31" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_cds_from_genbank(file_path):</span>
+<span id="cb55-32"><a href="#cb55-32" aria-hidden="true" tabindex="-1"></a>    record <span class="op">=</span> SeqIO.read(file_path, <span class="st">"genbank"</span>)</span>
+<span id="cb55-33"><a href="#cb55-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> feature <span class="kw">in</span> record.features:</span>
+<span id="cb55-34"><a href="#cb55-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> feature.<span class="bu">type</span> <span class="op">==</span> <span class="st">"CDS"</span>:</span>
+<span id="cb55-35"><a href="#cb55-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> feature.location.extract(record).seq</span>
+<span id="cb55-36"><a href="#cb55-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"No CDS found in the GenBank file."</span>)</span>
+<span id="cb55-37"><a href="#cb55-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-38"><a href="#cb55-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to generate synonymous mutants</span></span>
+<span id="cb55-39"><a href="#cb55-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_synonymous_mutants(cds_seq):</span>
+<span id="cb55-40"><a href="#cb55-40" aria-hidden="true" tabindex="-1"></a>    protein_seq <span class="op">=</span> cds_seq.translate()</span>
+<span id="cb55-41"><a href="#cb55-41" aria-hidden="true" tabindex="-1"></a>    codon_options <span class="op">=</span> []</span>
+<span id="cb55-42"><a href="#cb55-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-43"><a href="#cb55-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> aa <span class="kw">in</span> protein_seq[:<span class="dv">5</span>]:</span>
+<span id="cb55-44"><a href="#cb55-44" aria-hidden="true" tabindex="-1"></a>        codons <span class="op">=</span> synonymous_codons.get(aa, [])</span>
+<span id="cb55-45"><a href="#cb55-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> codons:</span>
+<span id="cb55-46"><a href="#cb55-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Unknown amino acid </span><span class="sc">{</span>aa<span class="sc">}</span><span class="ss"> encountered."</span>)</span>
+<span id="cb55-47"><a href="#cb55-47" aria-hidden="true" tabindex="-1"></a>        codon_options.append(codons)</span>
+<span id="cb55-48"><a href="#cb55-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-49"><a href="#cb55-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate all combinations of synonymous codons</span></span>
+<span id="cb55-50"><a href="#cb55-50" aria-hidden="true" tabindex="-1"></a>    all_mutants <span class="op">=</span> <span class="bu">list</span>(product(<span class="op">*</span>codon_options))</span>
+<span id="cb55-51"><a href="#cb55-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="st">''</span>.join(mutant) <span class="cf">for</span> mutant <span class="kw">in</span> all_mutants]</span>
+<span id="cb55-52"><a href="#cb55-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-53"><a href="#cb55-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Main function</span></span>
+<span id="cb55-54"><a href="#cb55-54" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main(genbank_file, output_file):</span>
+<span id="cb55-55"><a href="#cb55-55" aria-hidden="true" tabindex="-1"></a>    cds_seq <span class="op">=</span> read_cds_from_genbank(genbank_file)</span>
+<span id="cb55-56"><a href="#cb55-56" aria-hidden="true" tabindex="-1"></a>    mutants <span class="op">=</span> generate_synonymous_mutants(cds_seq)</span>
+<span id="cb55-57"><a href="#cb55-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-58"><a href="#cb55-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write the mutants to a FASTA file</span></span>
+<span id="cb55-59"><a href="#cb55-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">'w'</span>) <span class="im">as</span> f:</span>
+<span id="cb55-60"><a href="#cb55-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, mutant <span class="kw">in</span> <span class="bu">enumerate</span>(mutants):</span>
+<span id="cb55-61"><a href="#cb55-61" aria-hidden="true" tabindex="-1"></a>            f.write(<span class="ss">f"&gt;Mutant_</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ch">\n</span><span class="sc">{</span>mutant<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb55-62"><a href="#cb55-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-63"><a href="#cb55-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
+<span id="cb55-64"><a href="#cb55-64" aria-hidden="true" tabindex="-1"></a>genbank_file <span class="op">=</span> <span class="st">'egfp.gb'</span>  <span class="co"># Replace with your GenBank file path</span></span>
+<span id="cb55-65"><a href="#cb55-65" aria-hidden="true" tabindex="-1"></a>output_file <span class="op">=</span> <span class="st">'mutant_library.fasta'</span></span>
+<span id="cb55-66"><a href="#cb55-66" aria-hidden="true" tabindex="-1"></a>main(genbank_file, output_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>위 코드를 두 개의 파일로 나누어 (함수모음 파일, 실행 파일) 모듈 실습 가능</li>
 </ul>
 
 
+</section>
 </section>
 </section>
 
