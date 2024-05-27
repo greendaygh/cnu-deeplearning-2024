@@ -17,6 +17,7 @@ book:
     - cnu_introduction.ipynb
     - cnu_basic.ipynb
     - cnu_data_handling.ipynb
+    - cnu_bioinformatics.ipynb
   
 
 format:
