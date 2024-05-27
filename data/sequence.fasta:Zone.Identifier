@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://www.ncbi.nlm.nih.gov/nuccore
+HostUrl=https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?tool=portal&save=file&log$=seqview&db=nuccore&report=fasta&query_key=6&filter=all&extrafeat=undefined&ncbi_phid=CE8B2A8D64CE99110000000001D70199
