@@ -187,10 +187,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#biopython" id="toc-biopython" class="nav-link active" data-scroll-target="#biopython"><span class="header-section-number">5.0.1</span> Biopython</a></li>
-  <li><a href="#scikit-bio" id="toc-scikit-bio" class="nav-link" data-scroll-target="#scikit-bio"><span class="header-section-number">5.0.2</span> scikit-bio</a></li>
-  <li><a href="#example-analyzing-a-protein-sequence" id="toc-example-analyzing-a-protein-sequence" class="nav-link" data-scroll-target="#example-analyzing-a-protein-sequence"><span class="header-section-number">5.0.3</span> Example: Analyzing a Protein Sequence</a></li>
-  <li><a href="#explanation" id="toc-explanation" class="nav-link" data-scroll-target="#explanation"><span class="header-section-number">5.0.4</span> Explanation:</a></li>
+  <li><a href="#user" id="toc-user" class="nav-link active" data-scroll-target="#user"><span class="header-section-number">5.0.1</span> [User]</a></li>
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt"><span class="header-section-number">5.0.2</span> [ChatGPT]</a></li>
+  <li><a href="#biopython" id="toc-biopython" class="nav-link" data-scroll-target="#biopython"><span class="header-section-number">5.0.3</span> Biopython</a></li>
+  <li><a href="#scikit-bio" id="toc-scikit-bio" class="nav-link" data-scroll-target="#scikit-bio"><span class="header-section-number">5.0.4</span> scikit-bio</a></li>
+  <li><a href="#example-analyzing-a-protein-sequence" id="toc-example-analyzing-a-protein-sequence" class="nav-link" data-scroll-target="#example-analyzing-a-protein-sequence"><span class="header-section-number">5.0.5</span> Example: Analyzing a Protein Sequence</a></li>
+  <li><a href="#explanation" id="toc-explanation" class="nav-link" data-scroll-target="#explanation"><span class="header-section-number">5.0.6</span> Explanation:</a></li>
   </ul>
 </nav>
     </div>
@@ -216,23 +218,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="user" class="level4" data-number="5.0.0.1">
-<h4 data-number="5.0.0.1" class="anchored" data-anchor-id="user"><span class="header-section-number">5.0.0.1</span> [User]</h4>
+<section id="user" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="user"><span class="header-section-number">5.0.1</span> [User]</h3>
 <p><span style="color:blue; font-size:20pt"> I want to learn about “3. Bioinformatics Libraries”. Can you explain it with example codes? </span></p>
 </section>
-<section id="chatgpt" class="level4" data-number="5.0.0.2">
-<h4 data-number="5.0.0.2" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">5.0.0.2</span> [ChatGPT]</h4>
+<section id="chatgpt" class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">5.0.2</span> [ChatGPT]</h3>
 <p>Certainly! Bioinformatics libraries in Python, such as Biopython and scikit-bio, provide tools and functions to handle biological data, including sequence analysis, structure analysis, and more. Here’s a brief introduction to these libraries with example codes.</p>
 </section>
-<section id="biopython" class="level3" data-number="5.0.1">
-<h3 data-number="5.0.1" class="anchored" data-anchor-id="biopython"><span class="header-section-number">5.0.1</span> Biopython</h3>
+<section id="biopython" class="level3" data-number="5.0.3">
+<h3 data-number="5.0.3" class="anchored" data-anchor-id="biopython"><span class="header-section-number">5.0.3</span> Biopython</h3>
 <p>Biopython is one of the most widely used libraries for bioinformatics in Python. It provides tools for reading and writing different bioinformatics file formats, performing sequence analysis, and interacting with biological databases.</p>
-<section id="installation" class="level4" data-number="5.0.1.1">
-<h4 data-number="5.0.1.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">5.0.1.1</span> Installation</h4>
+<section id="installation" class="level4" data-number="5.0.3.1">
+<h4 data-number="5.0.3.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">5.0.3.1</span> Installation</h4>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install biopython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="sequence-objects" class="level4" data-number="5.0.1.2">
-<h4 data-number="5.0.1.2" class="anchored" data-anchor-id="sequence-objects"><span class="header-section-number">5.0.1.2</span> Sequence objects</h4>
+<section id="sequence-objects" class="level4" data-number="5.0.3.2">
+<h4 data-number="5.0.3.2" class="anchored" data-anchor-id="sequence-objects"><span class="header-section-number">5.0.3.2</span> Sequence objects</h4>
 <div id="cell-4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_seq <span class="op">=</span> Seq(<span class="st">"AGTACACTGGT"</span>)</span>
@@ -406,8 +408,8 @@ G | GTG V   | GCG A   | GAG E   | GGG G   | G
 </div>
 </div>
 </section>
-<section id="seqrecord" class="level4" data-number="5.0.1.3">
-<h4 data-number="5.0.1.3" class="anchored" data-anchor-id="seqrecord"><span class="header-section-number">5.0.1.3</span> SeqRecord</h4>
+<section id="seqrecord" class="level4" data-number="5.0.3.3">
+<h4 data-number="5.0.3.3" class="anchored" data-anchor-id="seqrecord"><span class="header-section-number">5.0.3.3</span> SeqRecord</h4>
 <ul>
 <li>Sequence annotation objects</li>
 <li>특정 서열의 identifier나 feature 정보 포함</li>
@@ -588,12 +590,12 @@ qualifiers:
 </div>
 </div>
 </section>
-<section id="user-1" class="level4" data-number="5.0.1.4">
-<h4 data-number="5.0.1.4" class="anchored" data-anchor-id="user-1"><span class="header-section-number">5.0.1.4</span> [User]</h4>
+<section id="user-1" class="level4" data-number="5.0.3.4">
+<h4 data-number="5.0.3.4" class="anchored" data-anchor-id="user-1"><span class="header-section-number">5.0.3.4</span> [User]</h4>
 <p><span style="color:blue; font-size: 20"> I have a genbank file. I want extract all the features of “mat_peptide” type in the file and calculate their length. can you show me a python code? </span></p>
 </section>
-<section id="chatgpt-1" class="level4" data-number="5.0.1.5">
-<h4 data-number="5.0.1.5" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">5.0.1.5</span> [ChatGPT]</h4>
+<section id="chatgpt-1" class="level4" data-number="5.0.3.5">
+<h4 data-number="5.0.3.5" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">5.0.3.5</span> [ChatGPT]</h4>
 <p>Certainly! You can use Biopython to read a GenBank file and extract features of a specific type, such as “mat_peptide”. Here’s how you can do it:</p>
 <p><strong>Python Script</strong></p>
 <p>Here is the Python script that extracts all “mat_peptide” features from a GenBank file and calculates their lengths:</p>
@@ -711,8 +713,8 @@ qualifiers:
 </div>
 </div>
 </section>
-<section id="entrez" class="level4" data-number="5.0.1.6">
-<h4 data-number="5.0.1.6" class="anchored" data-anchor-id="entrez"><span class="header-section-number">5.0.1.6</span> Entrez</h4>
+<section id="entrez" class="level4" data-number="5.0.3.6">
+<h4 data-number="5.0.3.6" class="anchored" data-anchor-id="entrez"><span class="header-section-number">5.0.3.6</span> Entrez</h4>
 <ul>
 <li>파일 읽기/쓰기 with 문 사용</li>
 </ul>
@@ -741,8 +743,8 @@ Sequence length 899, 3 features, from: chloroplast Grusonia bradtiana</code></pr
 </div>
 </div>
 </section>
-<section id="multiple-sequence-alignment-objects" class="level4" data-number="5.0.1.7">
-<h4 data-number="5.0.1.7" class="anchored" data-anchor-id="multiple-sequence-alignment-objects"><span class="header-section-number">5.0.1.7</span> Multiple sequence alignment objects</h4>
+<section id="multiple-sequence-alignment-objects" class="level4" data-number="5.0.3.7">
+<h4 data-number="5.0.3.7" class="anchored" data-anchor-id="multiple-sequence-alignment-objects"><span class="header-section-number">5.0.3.7</span> Multiple sequence alignment objects</h4>
 <ul>
 <li><p>http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc70<br>
 </p></li>
@@ -807,8 +809,8 @@ _|_________________ gi|6273287|gb|AF191661.1|AF191661
 </div>
 </div>
 </section>
-<section id="position-specific-scoring-matrix-pssm-matrix" class="level4" data-number="5.0.1.8">
-<h4 data-number="5.0.1.8" class="anchored" data-anchor-id="position-specific-scoring-matrix-pssm-matrix"><span class="header-section-number">5.0.1.8</span> Position specific scoring matrix (PSSM) matrix</h4>
+<section id="position-specific-scoring-matrix-pssm-matrix" class="level4" data-number="5.0.3.8">
+<h4 data-number="5.0.3.8" class="anchored" data-anchor-id="position-specific-scoring-matrix-pssm-matrix"><span class="header-section-number">5.0.3.8</span> Position specific scoring matrix (PSSM) matrix</h4>
 <div id="cell-54" class="cell">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
 <span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>test_seq<span class="op">=</span>Seq(<span class="st">"TAAGCGTGCACGCGCAACACGTGCATTA"</span>)</span>
@@ -941,8 +943,8 @@ KENKE</code></pre>
 </div>
 </div>
 </section>
-<section id="motif" class="level4" data-number="5.0.1.9">
-<h4 data-number="5.0.1.9" class="anchored" data-anchor-id="motif"><span class="header-section-number">5.0.1.9</span> Motif</h4>
+<section id="motif" class="level4" data-number="5.0.3.9">
+<h4 data-number="5.0.3.9" class="anchored" data-anchor-id="motif"><span class="header-section-number">5.0.3.9</span> Motif</h4>
 <ul>
 <li>Bio.motifs package included in Biopython 1.61</li>
 </ul>
@@ -1121,15 +1123,15 @@ T:   1.67  -4.00  -4.00  -4.00  -4.00
 </div>
 </section>
 </section>
-<section id="scikit-bio" class="level3" data-number="5.0.2">
-<h3 data-number="5.0.2" class="anchored" data-anchor-id="scikit-bio"><span class="header-section-number">5.0.2</span> scikit-bio</h3>
+<section id="scikit-bio" class="level3" data-number="5.0.4">
+<h3 data-number="5.0.4" class="anchored" data-anchor-id="scikit-bio"><span class="header-section-number">5.0.4</span> scikit-bio</h3>
 <p>scikit-bio is another library focused on bioinformatics, providing functionalities for sequence analysis, alignment, phylogenetics, and more.</p>
-<section id="installation-1" class="level4" data-number="5.0.2.1">
-<h4 data-number="5.0.2.1" class="anchored" data-anchor-id="installation-1"><span class="header-section-number">5.0.2.1</span> Installation</h4>
+<section id="installation-1" class="level4" data-number="5.0.4.1">
+<h4 data-number="5.0.4.1" class="anchored" data-anchor-id="installation-1"><span class="header-section-number">5.0.4.1</span> Installation</h4>
 <div class="sourceCode" id="cb96"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install scikit-bio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="basic-usage-examples" class="level4" data-number="5.0.2.2">
-<h4 data-number="5.0.2.2" class="anchored" data-anchor-id="basic-usage-examples"><span class="header-section-number">5.0.2.2</span> Basic Usage Examples</h4>
+<section id="basic-usage-examples" class="level4" data-number="5.0.4.2">
+<h4 data-number="5.0.4.2" class="anchored" data-anchor-id="basic-usage-examples"><span class="header-section-number">5.0.4.2</span> Basic Usage Examples</h4>
 <p><strong>Reading and Writing Sequence Files:</strong></p>
 <div class="sourceCode" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> skbio</span>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1179,8 +1181,8 @@ T:   1.67  -4.00  -4.00  -4.00  -4.00
 <span id="cb100-12"><a href="#cb100-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tree.ascii_art())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="example-analyzing-a-protein-sequence" class="level3" data-number="5.0.3">
-<h3 data-number="5.0.3" class="anchored" data-anchor-id="example-analyzing-a-protein-sequence"><span class="header-section-number">5.0.3</span> Example: Analyzing a Protein Sequence</h3>
+<section id="example-analyzing-a-protein-sequence" class="level3" data-number="5.0.5">
+<h3 data-number="5.0.5" class="anchored" data-anchor-id="example-analyzing-a-protein-sequence"><span class="header-section-number">5.0.5</span> Example: Analyzing a Protein Sequence</h3>
 <p>Let’s put together an example that reads a protein sequence from a GenBank file, performs some basic analysis using Biopython, and aligns it using scikit-bio.</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
@@ -1207,8 +1209,8 @@ T:   1.67  -4.00  -4.00  -4.00  -4.00
 <span id="cb101-23"><a href="#cb101-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Score:"</span>, score)</span>
 <span id="cb101-24"><a href="#cb101-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Start-End Positions:"</span>, start_end_positions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="explanation" class="level3" data-number="5.0.4">
-<h3 data-number="5.0.4" class="anchored" data-anchor-id="explanation"><span class="header-section-number">5.0.4</span> Explanation:</h3>
+<section id="explanation" class="level3" data-number="5.0.6">
+<h3 data-number="5.0.6" class="anchored" data-anchor-id="explanation"><span class="header-section-number">5.0.6</span> Explanation:</h3>
 <ul>
 <li><strong>Reading Sequence</strong>: We use Biopython to read a protein sequence from a GenBank file.</li>
 <li><strong>Sequence Analysis</strong>: We perform basic sequence operations like translation and reverse translation.</li>
