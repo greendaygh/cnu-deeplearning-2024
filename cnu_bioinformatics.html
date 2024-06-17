@@ -57,13 +57,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./cnu_machine_learning.html" rel="next">
 <link href="./cnu_data_handling.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,9 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -180,6 +178,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bioinformatics</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cnu_machine_learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Machine Learning and Deep Learning</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -204,7 +208,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#example-analyzing-a-protein-sequence" id="toc-example-analyzing-a-protein-sequence" class="nav-link" data-scroll-target="#example-analyzing-a-protein-sequence"><span class="header-section-number">5.3.8</span> Example: Analyzing a Protein Sequence</a></li>
   <li><a href="#explanation" id="toc-explanation" class="nav-link" data-scroll-target="#explanation"><span class="header-section-number">5.3.9</span> Explanation:</a></li>
   </ul></li>
-  <li><a href="#k-nearest-neighbor-knn" id="toc-k-nearest-neighbor-knn" class="nav-link" data-scroll-target="#k-nearest-neighbor-knn"><span class="header-section-number">5.4</span> K-Nearest Neighbor (KNN)</a></li>
   </ul>
 </nav>
     </div>
@@ -241,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="biopython" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="biopython"><span class="header-section-number">5.3</span> Biopython</h2>
 <p>Biopython is one of the most widely used libraries for bioinformatics in Python. It provides tools for reading and writing different bioinformatics file formats, performing sequence analysis, and interacting with biological databases.</p>
-<div id="cell-3" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002750875,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:20821,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="8a157136-41b0-42b3-8897-f2ace2be6cf0" data-execution_count="1">
+<div id="cell-3" class="cell" data-executioninfo="{&quot;elapsed&quot;:20821,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002750875,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="8a157136-41b0-42b3-8897-f2ace2be6cf0" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -253,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="installation" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="installation"><span class="header-section-number">5.3.1</span> Installation</h3>
-<div id="cell-5" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002763618,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:9908,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="3c545f70-ff28-424f-93d7-f84d13d23b22" data-execution_count="2">
+<div id="cell-5" class="cell" data-executioninfo="{&quot;elapsed&quot;:9908,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002763618,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="3c545f70-ff28-424f-93d7-f84d13d23b22" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install biopython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Collecting biopython
@@ -446,14 +449,14 @@ G | GTG V   | GCG A   | GAG E   | GGG G   | G
 <li>Sequence annotation objects</li>
 <li>특정 서열의 identifier나 feature 정보 포함</li>
 </ul>
-<div id="cell-22" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002778363,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:605,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="3">
+<div id="cell-22" class="cell" data-executioninfo="{&quot;elapsed&quot;:605,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002778363,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.SeqRecord <span class="im">import</span> SeqRecord</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>simple_seq <span class="op">=</span> Seq(<span class="st">"GATC"</span>)</span>
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>simple_seq_r <span class="op">=</span> SeqRecord(simple_seq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-23" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002786384,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:527,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="7220a557-9038-4344-bb40-58f79c14aba4" data-execution_count="4">
+<div id="cell-23" class="cell" data-executioninfo="{&quot;elapsed&quot;:527,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002786384,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="7220a557-9038-4344-bb40-58f79c14aba4" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(SeqRecord)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Help on class SeqRecord in module Bio.SeqRecord:
@@ -1337,7 +1340,7 @@ GATC</code></pre>
 <blockquote class="blockquote">
 <p>인용구 추가</p>
 </blockquote>
-<div id="cell-28" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002833369,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:730,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="6">
+<div id="cell-28" class="cell" data-executioninfo="{&quot;elapsed&quot;:730,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002833369,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>record <span class="op">=</span> SeqIO.read(<span class="st">"data/MW015936.gb"</span>, <span class="st">"gb"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2216,7 +2219,7 @@ class SeqRecord(builtins.object)
 </code></pre>
 </div>
 </div>
-<div id="cell-30" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002836915,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:969,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="2fa59a4d-6ed7-4d7e-8d14-adf9c8251ddb" data-execution_count="7">
+<div id="cell-30" class="cell" data-executioninfo="{&quot;elapsed&quot;:969,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002836915,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="2fa59a4d-6ed7-4d7e-8d14-adf9c8251ddb" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(record.<span class="bu">id</span>)</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(record.name)</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(record.description)</span>
@@ -2230,7 +2233,7 @@ AGTTGTTGATCTGTGTGAATCAGACTGCGACAGTTCGAGTTTGAAGCGAAAGCTAGCAACAGTATCAACAGGTTTTATTT
 [SeqFeature(SimpleLocation(ExactPosition(0), ExactPosition(10807), strand=1), type='source', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(107), ExactPosition(10379), strand=1), type='gene', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(107), ExactPosition(10379), strand=1), type='CDS', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(107), ExactPosition(473), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(107), ExactPosition(419), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(473), ExactPosition(977), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(473), ExactPosition(752), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(752), ExactPosition(977), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(977), ExactPosition(2489), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(2489), ExactPosition(3545), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(3545), ExactPosition(4223), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(4223), ExactPosition(4613), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(4613), ExactPosition(6464), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(6464), ExactPosition(6845), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(6845), ExactPosition(6914), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(6914), ExactPosition(7667), strand=1), type='mat_peptide', qualifiers=...), SeqFeature(SimpleLocation(ExactPosition(7667), ExactPosition(10376), strand=1), type='mat_peptide', qualifiers=...)]</code></pre>
 </div>
 </div>
-<div id="cell-31" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002846390,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="0bfe87fb-6616-4130-a76b-dbabc08b3a8e" data-execution_count="8">
+<div id="cell-31" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002846390,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="0bfe87fb-6616-4130-a76b-dbabc08b3a8e" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(record.seq))</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(record.features)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2265,7 +2268,7 @@ AGTTGTTGATCTGTGTGAATCAGACTGCGACAGTTCGAGTTTGAAGCGAAAGCTAGCAACAGTATCAACAGGTTTTATTT
 <ul>
 <li>Slicing</li>
 </ul>
-<div id="cell-34" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002859102,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:415,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="a5adf5cd-7111-490c-cd6f-07ef0797961f" data-execution_count="9">
+<div id="cell-34" class="cell" data-executioninfo="{&quot;elapsed&quot;:415,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002859102,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="a5adf5cd-7111-490c-cd6f-07ef0797961f" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(record.features[<span class="dv">0</span>])</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(record.features[<span class="dv">1</span>])</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(record.features[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2490,7 +2493,7 @@ qualifiers:
 <li>Provides code to access NCBI over the WWW</li>
 <li>파일 읽기/쓰기 with 문 사용</li>
 </ul>
-<div id="cell-49" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002883866,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:548,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="634c4fcd-58d6-461a-aaed-2a88e403756b" data-execution_count="10">
+<div id="cell-49" class="cell" data-executioninfo="{&quot;elapsed&quot;:548,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002883866,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="634c4fcd-58d6-461a-aaed-2a88e403756b" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> Entrez</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>Entrez.email <span class="op">=</span> <span class="st">"kimhaseong@gmail.com"</span></span>
 <span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2502,7 +2505,7 @@ qualifiers:
 <pre><code>['262359905', '2703623457', '2703623455', '2703623453', '2703623451']</code></pre>
 </div>
 </div>
-<div id="cell-50" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002926259,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1776,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="ac58c836-d2a6-4f99-a636-bd5b110d2364" data-execution_count="11">
+<div id="cell-50" class="cell" data-executioninfo="{&quot;elapsed&quot;:1776,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718002926259,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="ac58c836-d2a6-4f99-a636-bd5b110d2364" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> Entrez</span>
 <span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>entid <span class="op">=</span> record[<span class="st">"IdList"</span>][<span class="dv">0</span>]</span>
@@ -2601,7 +2604,7 @@ Sequence length 4167, 3               features, from Homo sapiens (human)
 </section>
 <section id="pairwise-sequence-alignment" class="level3" data-number="5.3.5">
 <h3 data-number="5.3.5" class="anchored" data-anchor-id="pairwise-sequence-alignment"><span class="header-section-number">5.3.5</span> Pairwise sequence alignment</h3>
-<div id="cell-54" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718003027343,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:579,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="64530e77-cb9d-43e3-acc2-3f4dd32fce7b" data-execution_count="12">
+<div id="cell-54" class="cell" data-executioninfo="{&quot;elapsed&quot;:579,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718003027343,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="64530e77-cb9d-43e3-acc2-3f4dd32fce7b" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> Align</span>
 <span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>aligner <span class="op">=</span> Align.PairwiseAligner()</span>
@@ -2650,7 +2653,7 @@ query             0 ACGAA-AGAAA 10
 </code></pre>
 </div>
 </div>
-<div id="cell-55" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718003039174,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:354,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="fb5ac001-c113-4902-d50b-ecaec31c994a" data-execution_count="13">
+<div id="cell-55" class="cell" data-executioninfo="{&quot;elapsed&quot;:354,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718003039174,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="fb5ac001-c113-4902-d50b-ecaec31c994a" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>aligner <span class="op">=</span> Align.PairwiseAligner(mismatch_score<span class="op">=-</span><span class="dv">10</span>, mode<span class="op">=</span><span class="st">"local"</span>)</span>
 <span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>alignments <span class="op">=</span> aligner.align(<span class="st">"AAACAAA"</span>, <span class="st">"ACGAAAGAAA"</span>)</span>
 <span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(alignments))</span>
@@ -2678,7 +2681,7 @@ query             0 ACGAA-AGAAA 10
 </div>
 <section id="alignment-objects" class="level4" data-number="5.3.5.1">
 <h4 data-number="5.3.5.1" class="anchored" data-anchor-id="alignment-objects"><span class="header-section-number">5.3.5.1</span> Alignment objects</h4>
-<div id="cell-57" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718003686363,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:4,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="aebd899c-2a65-492f-c9c6-d241d87866ed" data-execution_count="15">
+<div id="cell-57" class="cell" data-executioninfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718003686363,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="aebd899c-2a65-492f-c9c6-d241d87866ed" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(alignments[<span class="dv">0</span>])</span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(alignments[<span class="dv">0</span>]))</span>
@@ -2923,7 +2926,7 @@ AlignmentCounts(gaps=4, identities=6, mismatches=0)</code></pre>
 <span id="cb68-54"><a href="#cb68-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb68-55"><a href="#cb68-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Print formatted alignment</span></span>
 <span id="cb68-56"><a href="#cb68-56" aria-hidden="true" tabindex="-1"></a>print_alignment(alignment, egfp_accession, sfgfp_accession, chunk_size<span class="op">=</span><span class="dv">60</span>)  <span class="co"># You can adjust the chunk size as needed</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="cell-66" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718005716006,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:9221,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="34e3ae67-4525-4eec-a0a7-9c9b0e99ec19" data-execution_count="24">
+<div id="cell-66" class="cell" data-executioninfo="{&quot;elapsed&quot;:9221,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718005716006,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="34e3ae67-4525-4eec-a0a7-9c9b0e99ec19" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install matplotlib</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.7.1)
@@ -3004,7 +3007,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-pac
 </li>
 <li>Bio.AlignIO.parse() returns MultipleSeqAlignment objects</li>
 </ul>
-<div id="cell-71" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008052576,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1248,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="0d03204d-c4e0-47bb-fc1a-3569c660b4eb" data-execution_count="45">
+<div id="cell-71" class="cell" data-executioninfo="{&quot;elapsed&quot;:1248,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008052576,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="0d03204d-c4e0-47bb-fc1a-3569c660b4eb" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> Entrez</span>
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>Entrez.email <span class="op">=</span> <span class="st">"kimhaseong@gmail.com"</span></span>
 <span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3016,7 +3019,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-pac
 <pre><code>['NZ_CANUGE010000080.1', 'NZ_CANUHA010000080.1', 'NZ_CANUFW010000086.1', 'NZ_JAINSC010000053.1', 'NZ_JAUOTQ010000344.1', 'NZ_RQOE01000407.1', 'RQOE01000407.1', 'QFSK01000273.1', 'PTNY01001592.1', 'NSEG01000063.1', 'KP965724.1', 'AZLZ01000386.1']</code></pre>
 </div>
 </div>
-<div id="cell-72" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008875029,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:5089,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="66">
+<div id="cell-72" class="cell" data-executioninfo="{&quot;elapsed&quot;:5089,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008875029,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-execution_count="66">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> SeqIO</span>
 <span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>myidx <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
@@ -3035,7 +3038,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-pac
 <li><p>Alignment tools</p></li>
 <li><p>Clustalw를 이용한 서열 정렬 (cactus family Opuntia(선인장))</p></li>
 </ul>
-<div id="cell-75" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718007534331,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:23124,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="c3009dc7-bd03-43c9-ce35-e61787e7e9fe" data-execution_count="32">
+<div id="cell-75" class="cell" data-executioninfo="{&quot;elapsed&quot;:23124,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718007534331,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="c3009dc7-bd03-43c9-ce35-e61787e7e9fe" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>sudo apt<span class="op">-</span>get update</span>
 <span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>sudo apt<span class="op">-</span>get install <span class="op">-</span>y clustalw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3089,7 +3092,7 @@ Setting up clustalw (2.1+lgpl-7) ...
 Processing triggers for man-db (2.10.2-1) ...</code></pre>
 </div>
 </div>
-<div id="cell-76" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718007627527,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:417,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="34d4a6db-5e27-4a22-b7ba-e676fc97e43f" data-execution_count="36">
+<div id="cell-76" class="cell" data-executioninfo="{&quot;elapsed&quot;:417,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718007627527,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="34d4a6db-5e27-4a22-b7ba-e676fc97e43f" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>clustalw <span class="op">-</span><span class="bu">help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3206,7 +3209,7 @@ Processing triggers for man-db (2.10.2-1) ...</code></pre>
 -CLUSTERING=   :NJ or UPGMA</code></pre>
 </div>
 </div>
-<div id="cell-77" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008881403,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:522,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="92caa129-12e7-488d-81f5-f2a3e0bb31f6" data-execution_count="67">
+<div id="cell-77" class="cell" data-executioninfo="{&quot;elapsed&quot;:522,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008881403,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="92caa129-12e7-488d-81f5-f2a3e0bb31f6" data-execution_count="67">
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>cat data<span class="op">/</span>esterase.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt;NZ_CANUGE010000080.1 Escherichia coli strain ROAR-416 / O18:H7 / fimH15 / 95 (ST Warwick) isolate Faeces NODE_80_length_585_cov_58.954717, whole genome shotgun sequence
@@ -3244,7 +3247,7 @@ GTTTATTGAGGATATTACTGA
 </code></pre>
 </div>
 </div>
-<div id="cell-78" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008886524,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:552,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="199f0951-dae0-45a7-d238-f83cea0f4a9e" data-execution_count="68">
+<div id="cell-78" class="cell" data-executioninfo="{&quot;elapsed&quot;:552,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008886524,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="199f0951-dae0-45a7-d238-f83cea0f4a9e" data-execution_count="68">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>clustalw <span class="op">-</span>infile<span class="op">=</span>data<span class="op">/</span>esterase.fasta <span class="op">-</span>outfile<span class="op">=</span>data<span class="op">/</span>esterase.aln</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -3277,7 +3280,7 @@ CLUSTAL-Alignment file created  [data/esterase.aln]
 </code></pre>
 </div>
 </div>
-<div id="cell-79" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008893233,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:641,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="cbd3ad0a-42b1-4471-f613-30cf125c9178" data-execution_count="69">
+<div id="cell-79" class="cell" data-executioninfo="{&quot;elapsed&quot;:641,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008893233,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="cbd3ad0a-42b1-4471-f613-30cf125c9178" data-execution_count="69">
 <div class="sourceCode cell-code" id="cb83"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> AlignIO</span>
 <span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>align <span class="op">=</span> AlignIO.read(<span class="st">"data/esterase.aln"</span>, <span class="st">"clustal"</span>)</span>
 <span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(align)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3291,7 +3294,7 @@ ACTGAATATCGCTCGGCAACG-CCGCGGCTTATGGGGGCACTCC...--- NZ_RQOE01000407.1</code></pre
 <div id="cell-80" class="cell">
 <div class="sourceCode cell-code" id="cb85"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>align.substitutions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-81" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008897354,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:533,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="64a06d57-1a47-41a6-ec02-f0afbd3e1bb0" data-execution_count="70">
+<div id="cell-81" class="cell" data-executioninfo="{&quot;elapsed&quot;:533,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718008897354,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="64a06d57-1a47-41a6-ec02-f0afbd3e1bb0" data-execution_count="70">
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> Phylo</span>
 <span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> Phylo.read(<span class="st">"data/esterase.dnd"</span>, <span class="st">"newick"</span>)</span>
 <span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>Phylo.draw_ascii(tree)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3306,7 +3309,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 </div>
 <section id="position-specific-scoring-matrix-pssm-matrix" class="level4" data-number="5.3.6.1">
 <h4 data-number="5.3.6.1" class="anchored" data-anchor-id="position-specific-scoring-matrix-pssm-matrix"><span class="header-section-number">5.3.6.1</span> Position specific scoring matrix (PSSM) matrix</h4>
-<div id="cell-83" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718009312323,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:479,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="77">
+<div id="cell-83" class="cell" data-executioninfo="{&quot;elapsed&quot;:479,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718009312323,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-execution_count="77">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> AlignIO</span>
 <span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Align <span class="im">import</span> AlignInfo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -3314,7 +3317,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 <li>Pfam은 단백질 페밀리 database, 각 서열 그룹을 align 한 파일이 제공됨</li>
 <li>Family: Sigma54_activ_2 (PF14532) https://www.ebi.ac.uk/interpro/entry/pfam/PF14532/</li>
 </ul>
-<div id="cell-85" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010192728,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:410,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="ede3b4c5-b19f-4fd9-cebb-02435ed199a2" data-execution_count="79">
+<div id="cell-85" class="cell" data-executioninfo="{&quot;elapsed&quot;:410,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010192728,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="ede3b4c5-b19f-4fd9-cebb-02435ed199a2" data-execution_count="79">
 <div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>align <span class="op">=</span> AlignIO.read(<span class="st">"/content/drive/MyDrive/2024-cnu-lecture/data/PF14532_full.txt"</span>, <span class="st">"stockholm"</span>)</span>
 <span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(align)</span>
 <span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(align))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3346,7 +3349,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 <ul>
 <li>slicing alignment</li>
 </ul>
-<div id="cell-87" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010333247,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:383,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="38d4c949-9159-4395-a1ef-25bcef3d4108" data-execution_count="83">
+<div id="cell-87" class="cell" data-executioninfo="{&quot;elapsed&quot;:383,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010333247,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="38d4c949-9159-4395-a1ef-25bcef3d4108" data-execution_count="83">
 <div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(align[<span class="dv">3</span>:<span class="dv">8</span>,<span class="dv">100</span>:<span class="dv">200</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Alignment with 5 rows and 100 columns
@@ -3360,7 +3363,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 <ul>
 <li>Turn the alignment object into an array of letters</li>
 </ul>
-<div id="cell-89" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010491574,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:582,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="4b449e19-55c9-4b51-c024-031aefa1747f" data-execution_count="88">
+<div id="cell-89" class="cell" data-executioninfo="{&quot;elapsed&quot;:582,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010491574,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="4b449e19-55c9-4b51-c024-031aefa1747f" data-execution_count="88">
 <div class="sourceCode cell-code" id="cb93"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> AlignIO</span>
 <span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>align <span class="op">=</span> AlignIO.read(<span class="st">"/content/drive/MyDrive/2024-cnu-lecture/data/esterase.aln"</span>, <span class="st">"clustal"</span>)</span>
@@ -3376,7 +3379,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 </div>
 </div>
 <p>Note that this leaves the original Biopython alignment object and the NumPy array in memory as separate objects - editing one will not update the other!</p>
-<div id="cell-91" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010506445,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:393,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="9090c6f1-93f9-44eb-c0a6-8846e2da57f9" data-execution_count="89">
+<div id="cell-91" class="cell" data-executioninfo="{&quot;elapsed&quot;:393,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010506445,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="9090c6f1-93f9-44eb-c0a6-8846e2da57f9" data-execution_count="89">
 <div class="sourceCode cell-code" id="cb95"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>align_array.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="89">
 <pre><code>(3, 641)</code></pre>
@@ -3387,7 +3390,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 <li>consensus sequence, position specific score matrix 계산</li>
 <li>information content와 substitution 정보 계산 가능</li>
 </ul>
-<div id="cell-93" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010631713,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:3,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="182f6e8a-8f1e-41a3-f3c4-c6ffa681741e" data-execution_count="97">
+<div id="cell-93" class="cell" data-executioninfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010631713,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="182f6e8a-8f1e-41a3-f3c4-c6ffa681741e" data-execution_count="97">
 <div class="sourceCode cell-code" id="cb97"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>summary_align <span class="op">=</span> AlignInfo.SummaryInfo(align)</span>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>consensus <span class="op">=</span> summary_align.dumb_consensus()</span>
 <span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(consensus)</span>
@@ -3421,7 +3424,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
  {'A': 0, 'C': 3.0, 'G': 0, 'T': 0}]</code></pre>
 </div>
 </div>
-<div id="cell-94" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010646782,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:600,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="8a173322-9ae0-4e3b-8dfb-e9e88c7a2de0" data-execution_count="98">
+<div id="cell-94" class="cell" data-executioninfo="{&quot;elapsed&quot;:600,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010646782,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="8a173322-9ae0-4e3b-8dfb-e9e88c7a2de0" data-execution_count="98">
 <div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a>instances <span class="op">=</span> [al.seq <span class="cf">for</span> al <span class="kw">in</span> align[:<span class="dv">10</span>]]</span>
 <span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(instances)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3434,11 +3437,11 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 <ul>
 <li>Bio.motifs package included in Biopython 1.61</li>
 </ul>
-<div id="cell-97" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010666324,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:454,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="99">
+<div id="cell-97" class="cell" data-executioninfo="{&quot;elapsed&quot;:454,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010666324,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-execution_count="99">
 <div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio <span class="im">import</span> motifs</span>
 <span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> Bio.Seq <span class="im">import</span> Seq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-98" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010667851,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:394,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="100">
+<div id="cell-98" class="cell" data-executioninfo="{&quot;elapsed&quot;:394,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010667851,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-execution_count="100">
 <div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>instances <span class="op">=</span> [Seq(<span class="st">"TACAA"</span>),</span>
 <span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>            Seq(<span class="st">"TACGA"</span>),</span>
 <span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a>            Seq(<span class="st">"TACAA"</span>),</span>
@@ -3447,7 +3450,7 @@ _|_______________________________________________________ NZ_JAUOTQ010000344.1
 <span id="cb103-6"><a href="#cb103-6" aria-hidden="true" tabindex="-1"></a>            Seq(<span class="st">"AACGA"</span>),</span>
 <span id="cb103-7"><a href="#cb103-7" aria-hidden="true" tabindex="-1"></a>           ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-99" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010682563,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="2fd174c9-ffe7-4135-ef40-5e6c46f0e311" data-execution_count="101">
+<div id="cell-99" class="cell" data-executioninfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010682563,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="2fd174c9-ffe7-4135-ef40-5e6c46f0e311" data-execution_count="101">
 <div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> motifs.create(instances)</span>
 <span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3459,7 +3462,7 @@ TACAA
 AACGA</code></pre>
 </div>
 </div>
-<div id="cell-100" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010686254,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:506,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="88078b47-4c16-4fc4-9bd1-0aa698b3157b" data-execution_count="102">
+<div id="cell-100" class="cell" data-executioninfo="{&quot;elapsed&quot;:506,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010686254,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="88078b47-4c16-4fc4-9bd1-0aa698b3157b" data-execution_count="102">
 <div class="sourceCode cell-code" id="cb106"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>m.counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="102">
 <pre><code>{'A': [1.0, 6.0, 0.0, 4.0, 6.0],
@@ -3468,7 +3471,7 @@ AACGA</code></pre>
  'T': [5.0, 0.0, 0.0, 0.0, 0.0]}</code></pre>
 </div>
 </div>
-<div id="cell-101" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010715827,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1131,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="36931a48-da2e-40a8-f40b-8e87bb81696f" data-execution_count="105">
+<div id="cell-101" class="cell" data-executioninfo="{&quot;elapsed&quot;:1131,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010715827,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="36931a48-da2e-40a8-f40b-8e87bb81696f" data-execution_count="105">
 <div class="sourceCode cell-code" id="cb108"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>m.counts[<span class="st">"A"</span>, <span class="dv">1</span>]</span>
 <span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> m.reverse_complement()</span>
 <span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(r.consensus)</span>
@@ -3477,7 +3480,7 @@ AACGA</code></pre>
 <pre><code>TTGTA</code></pre>
 </div>
 </div>
-<div id="cell-102" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010734503,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:659,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="0856bd1d-4698-491a-f66a-7ad8807349c3" data-execution_count="106">
+<div id="cell-102" class="cell" data-executioninfo="{&quot;elapsed&quot;:659,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010734503,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="0856bd1d-4698-491a-f66a-7ad8807349c3" data-execution_count="106">
 <div class="sourceCode cell-code" id="cb110"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image, display</span>
 <span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>display(Image(filename<span class="op">=</span><span class="st">"/content/drive/MyDrive/2024-cnu-lecture/data/mymotif.png"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -3492,7 +3495,7 @@ AACGA</code></pre>
 <li>Position-weight matrices 계산</li>
 <li>.counts 특성 사용</li>
 </ul>
-<div id="cell-104" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010744158,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1031,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="751b5778-b941-4fab-a789-5388fbfb5fd1" data-execution_count="107">
+<div id="cell-104" class="cell" data-executioninfo="{&quot;elapsed&quot;:1031,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010744158,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="751b5778-b941-4fab-a789-5388fbfb5fd1" data-execution_count="107">
 <div class="sourceCode cell-code" id="cb111"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>pwm <span class="op">=</span> m.counts.normalize(pseudocounts<span class="op">=</span><span class="fl">0.5</span>)</span>
 <span id="cb111-2"><a href="#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pwm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3504,7 +3507,7 @@ T:   0.69   0.06   0.06   0.06   0.06
 </code></pre>
 </div>
 </div>
-<div id="cell-105" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010748791,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:373,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="ca5a2fc2-9a32-4afd-d265-abe658f85cce" data-execution_count="108">
+<div id="cell-105" class="cell" data-executioninfo="{&quot;elapsed&quot;:373,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010748791,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="ca5a2fc2-9a32-4afd-d265-abe658f85cce" data-execution_count="108">
 <div class="sourceCode cell-code" id="cb113"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>pssm <span class="op">=</span> pwm.log_odds()</span>
 <span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pssm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -3516,7 +3519,7 @@ T:   1.46  -2.00  -2.00  -2.00  -2.00
 </code></pre>
 </div>
 </div>
-<div id="cell-106" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010751170,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:352,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="70b90032-f911-4137-d885-d48c3dabb5b6" data-execution_count="109">
+<div id="cell-106" class="cell" data-executioninfo="{&quot;elapsed&quot;:352,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718010751170,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="70b90032-f911-4137-d885-d48c3dabb5b6" data-execution_count="109">
 <div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>background <span class="op">=</span> {<span class="st">"A"</span>:<span class="fl">0.3</span>,<span class="st">"C"</span>:<span class="fl">0.2</span>,<span class="st">"G"</span>:<span class="fl">0.2</span>,<span class="st">"T"</span>:<span class="fl">0.3</span>}</span>
 <span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>pssm <span class="op">=</span> pwm.log_odds(background)</span>
 <span id="cb115-3"><a href="#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pssm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3532,7 +3535,7 @@ T:   1.20  -2.26  -2.26  -2.26  -2.26
 <ul>
 <li>Using the PSSM score</li>
 </ul>
-<div id="cell-108" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011127453,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:342,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="afd5d319-803e-40aa-e377-58085593b153" data-execution_count="116">
+<div id="cell-108" class="cell" data-executioninfo="{&quot;elapsed&quot;:342,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011127453,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="afd5d319-803e-40aa-e377-58085593b153" data-execution_count="116">
 <div class="sourceCode cell-code" id="cb117"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb117-1"><a href="#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pos, score <span class="kw">in</span> pssm.search(test_seq, threshold<span class="op">=</span><span class="fl">3.0</span>):</span>
 <span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="sc">%d</span><span class="st">, </span><span class="sc">%f</span><span class="st"> "</span> <span class="op">%</span> (pos, score))</span>
 <span id="cb117-3"><a href="#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pssm.calculate(test_seq))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -3547,7 +3550,7 @@ T:   1.20  -2.26  -2.26  -2.26  -2.26
 </div>
 </div>
 <p><img src="PWMScanning.png" class="img-fluid"></p>
-<div id="cell-110" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011130324,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:509,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="d9ac9a48-faba-4cf9-c92d-463db376e7da" data-execution_count="117">
+<div id="cell-110" class="cell" data-executioninfo="{&quot;elapsed&quot;:509,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011130324,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="d9ac9a48-faba-4cf9-c92d-463db376e7da" data-execution_count="117">
 <div class="sourceCode cell-code" id="cb119"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a>m.pseudocounts <span class="op">=</span> <span class="fl">0.1</span></span>
 <span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m.counts)</span>
 <span id="cb119-3"><a href="#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(m.pwm)</span>
@@ -3669,1192 +3672,9 @@ T:   1.67  -4.00  -4.00  -4.00  -4.00
 <li><strong>Alignment</strong>: We use scikit-bio to perform a global pairwise alignment between two protein sequences.</li>
 </ul>
 <p>By mastering these bioinformatics libraries, you will be well-equipped to handle a wide range of bioinformatics tasks and analyses in your research. If you have specific questions or need further examples, feel free to ask!</p>
+
+
 </section>
-</section>
-<section id="k-nearest-neighbor-knn" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="k-nearest-neighbor-knn"><span class="header-section-number">5.4</span> K-Nearest Neighbor (KNN)</h2>
-<div id="cell-113" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012311782,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:364,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="162">
-<div class="sourceCode cell-code" id="cb127"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb127-1"><a href="#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb127-2"><a href="#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb127-3"><a href="#cb127-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb127-4"><a href="#cb127-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb127-5"><a href="#cb127-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_breast_cancer</span>
-<span id="cb127-6"><a href="#cb127-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
-<span id="cb127-7"><a href="#cb127-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> KNeighborsClassifier</span>
-<span id="cb127-8"><a href="#cb127-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb127-9"><a href="#cb127-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb127-10"><a href="#cb127-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-114" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011485440,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:434,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="130">
-<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>breast_cancer <span class="op">=</span> load_breast_cancer()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-115" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012313301,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="7fc8222b-6da6-452c-a42f-4006e8466673" data-execution_count="163">
-<div class="sourceCode cell-code" id="cb129"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb129-1"><a href="#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(breast_cancer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="163">
-<pre><code>['DESCR',
- 'data',
- 'data_module',
- 'feature_names',
- 'filename',
- 'frame',
- 'target',
- 'target_names']</code></pre>
-</div>
-</div>
-<div id="cell-116" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012314551,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="d6ef9d33-2f9c-45a2-ad96-e4d257d73006" data-execution_count="164">
-<div class="sourceCode cell-code" id="cb131"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb131-1"><a href="#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(breast_cancer.DESCR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>.. _breast_cancer_dataset:
-
-Breast cancer wisconsin (diagnostic) dataset
---------------------------------------------
-
-**Data Set Characteristics:**
-
-    :Number of Instances: 569
-
-    :Number of Attributes: 30 numeric, predictive attributes and the class
-
-    :Attribute Information:
-        - radius (mean of distances from center to points on the perimeter)
-        - texture (standard deviation of gray-scale values)
-        - perimeter
-        - area
-        - smoothness (local variation in radius lengths)
-        - compactness (perimeter^2 / area - 1.0)
-        - concavity (severity of concave portions of the contour)
-        - concave points (number of concave portions of the contour)
-        - symmetry
-        - fractal dimension ("coastline approximation" - 1)
-
-        The mean, standard error, and "worst" or largest (mean of the three
-        worst/largest values) of these features were computed for each image,
-        resulting in 30 features.  For instance, field 0 is Mean Radius, field
-        10 is Radius SE, field 20 is Worst Radius.
-
-        - class:
-                - WDBC-Malignant
-                - WDBC-Benign
-
-    :Summary Statistics:
-
-    ===================================== ====== ======
-                                           Min    Max
-    ===================================== ====== ======
-    radius (mean):                        6.981  28.11
-    texture (mean):                       9.71   39.28
-    perimeter (mean):                     43.79  188.5
-    area (mean):                          143.5  2501.0
-    smoothness (mean):                    0.053  0.163
-    compactness (mean):                   0.019  0.345
-    concavity (mean):                     0.0    0.427
-    concave points (mean):                0.0    0.201
-    symmetry (mean):                      0.106  0.304
-    fractal dimension (mean):             0.05   0.097
-    radius (standard error):              0.112  2.873
-    texture (standard error):             0.36   4.885
-    perimeter (standard error):           0.757  21.98
-    area (standard error):                6.802  542.2
-    smoothness (standard error):          0.002  0.031
-    compactness (standard error):         0.002  0.135
-    concavity (standard error):           0.0    0.396
-    concave points (standard error):      0.0    0.053
-    symmetry (standard error):            0.008  0.079
-    fractal dimension (standard error):   0.001  0.03
-    radius (worst):                       7.93   36.04
-    texture (worst):                      12.02  49.54
-    perimeter (worst):                    50.41  251.2
-    area (worst):                         185.2  4254.0
-    smoothness (worst):                   0.071  0.223
-    compactness (worst):                  0.027  1.058
-    concavity (worst):                    0.0    1.252
-    concave points (worst):               0.0    0.291
-    symmetry (worst):                     0.156  0.664
-    fractal dimension (worst):            0.055  0.208
-    ===================================== ====== ======
-
-    :Missing Attribute Values: None
-
-    :Class Distribution: 212 - Malignant, 357 - Benign
-
-    :Creator:  Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian
-
-    :Donor: Nick Street
-
-    :Date: November, 1995
-
-This is a copy of UCI ML Breast Cancer Wisconsin (Diagnostic) datasets.
-https://goo.gl/U2Uwz2
-
-Features are computed from a digitized image of a fine needle
-aspirate (FNA) of a breast mass.  They describe
-characteristics of the cell nuclei present in the image.
-
-Separating plane described above was obtained using
-Multisurface Method-Tree (MSM-T) [K. P. Bennett, "Decision Tree
-Construction Via Linear Programming." Proceedings of the 4th
-Midwest Artificial Intelligence and Cognitive Science Society,
-pp. 97-101, 1992], a classification method which uses linear
-programming to construct a decision tree.  Relevant features
-were selected using an exhaustive search in the space of 1-4
-features and 1-3 separating planes.
-
-The actual linear program used to obtain the separating plane
-in the 3-dimensional space is that described in:
-[K. P. Bennett and O. L. Mangasarian: "Robust Linear
-Programming Discrimination of Two Linearly Inseparable Sets",
-Optimization Methods and Software 1, 1992, 23-34].
-
-This database is also available through the UW CS ftp server:
-
-ftp ftp.cs.wisc.edu
-cd math-prog/cpo-dataset/machine-learn/WDBC/
-
-.. topic:: References
-
-   - W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction 
-     for breast tumor diagnosis. IS&amp;T/SPIE 1993 International Symposium on 
-     Electronic Imaging: Science and Technology, volume 1905, pages 861-870,
-     San Jose, CA, 1993.
-   - O.L. Mangasarian, W.N. Street and W.H. Wolberg. Breast cancer diagnosis and 
-     prognosis via linear programming. Operations Research, 43(4), pages 570-577, 
-     July-August 1995.
-   - W.H. Wolberg, W.N. Street, and O.L. Mangasarian. Machine learning techniques
-     to diagnose breast cancer from fine-needle aspirates. Cancer Letters 77 (1994) 
-     163-171.</code></pre>
-</div>
-</div>
-<div id="cell-117" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011518707,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="d57f309b-6790-4903-976b-00a72819da59" data-execution_count="132">
-<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb133-1"><a href="#cb133-1" aria-hidden="true" tabindex="-1"></a>breast_cancer.data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="132">
-<pre><code>array([[1.799e+01, 1.038e+01, 1.228e+02, ..., 2.654e-01, 4.601e-01,
-        1.189e-01],
-       [2.057e+01, 1.777e+01, 1.329e+02, ..., 1.860e-01, 2.750e-01,
-        8.902e-02],
-       [1.969e+01, 2.125e+01, 1.300e+02, ..., 2.430e-01, 3.613e-01,
-        8.758e-02],
-       ...,
-       [1.660e+01, 2.808e+01, 1.083e+02, ..., 1.418e-01, 2.218e-01,
-        7.820e-02],
-       [2.060e+01, 2.933e+01, 1.401e+02, ..., 2.650e-01, 4.087e-01,
-        1.240e-01],
-       [7.760e+00, 2.454e+01, 4.792e+01, ..., 0.000e+00, 2.871e-01,
-        7.039e-02]])</code></pre>
-</div>
-</div>
-<div id="cell-118" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012318331,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:426,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="0041998c-916a-4c6f-d64d-286cd0be10e4" data-execution_count="165">
-<div class="sourceCode cell-code" id="cb135"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(breast_cancer.data.shape)</span>
-<span id="cb135-2"><a href="#cb135-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame(breast_cancer.data, columns<span class="op">=</span>breast_cancer.feature_names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>(569, 30)</code></pre>
-</div>
-</div>
-<div id="cell-119" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012319653,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:1,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="036546e9-f5d2-44aa-9d26-69922b3b065e" data-execution_count="166">
-<div class="sourceCode cell-code" id="cb137"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(X.iloc[<span class="dv">0</span>:<span class="dv">3</span>,])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   mean radius  mean texture  mean perimeter  mean area  mean smoothness  \
-0        17.99         10.38           122.8     1001.0          0.11840   
-1        20.57         17.77           132.9     1326.0          0.08474   
-2        19.69         21.25           130.0     1203.0          0.10960   
-
-   mean compactness  mean concavity  mean concave points  mean symmetry  \
-0           0.27760          0.3001              0.14710         0.2419   
-1           0.07864          0.0869              0.07017         0.1812   
-2           0.15990          0.1974              0.12790         0.2069   
-
-   mean fractal dimension  ...  worst radius  worst texture  worst perimeter  \
-0                 0.07871  ...         25.38          17.33            184.6   
-1                 0.05667  ...         24.99          23.41            158.8   
-2                 0.05999  ...         23.57          25.53            152.5   
-
-   worst area  worst smoothness  worst compactness  worst concavity  \
-0      2019.0            0.1622             0.6656           0.7119   
-1      1956.0            0.1238             0.1866           0.2416   
-2      1709.0            0.1444             0.4245           0.4504   
-
-   worst concave points  worst symmetry  worst fractal dimension  
-0                0.2654          0.4601                  0.11890  
-1                0.1860          0.2750                  0.08902  
-2                0.2430          0.3613                  0.08758  
-
-[3 rows x 30 columns]</code></pre>
-</div>
-</div>
-<div id="cell-120" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012321596,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:519,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="e19cbdc6-650e-4ac4-f19f-2c3b833633e7" data-execution_count="167">
-<div class="sourceCode cell-code" id="cb139"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a>X.loc[:, [<span class="st">"mean area"</span>, <span class="st">"mean compactness"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="167">
-<div>
-
-  <div id="df-4a358839-a732-49bd-aba1-c58782366bb9" class="colab-df-container">
-    <div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">mean area</th>
-<th data-quarto-table-cell-role="th">mean compactness</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1001.0</td>
-<td>0.27760</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>1326.0</td>
-<td>0.07864</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>1203.0</td>
-<td>0.15990</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>386.1</td>
-<td>0.28390</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>1297.0</td>
-<td>0.13280</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">564</td>
-<td>1479.0</td>
-<td>0.11590</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">565</td>
-<td>1261.0</td>
-<td>0.10340</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">566</td>
-<td>858.1</td>
-<td>0.10230</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">567</td>
-<td>1265.0</td>
-<td>0.27700</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">568</td>
-<td>181.0</td>
-<td>0.04362</td>
-</tr>
-</tbody>
-</table>
-
-<p>569 rows × 2 columns</p>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-4a358839-a732-49bd-aba1-c58782366bb9')" title="Convert this dataframe to an interactive table." style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-4a358839-a732-49bd-aba1-c58782366bb9 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-4a358839-a732-49bd-aba1-c58782366bb9');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-169079f1-d56c-4ff0-bbe7-758817930487">
-  <button class="colab-df-quickchart" onclick="quickchart('df-169079f1-d56c-4ff0-bbe7-758817930487')" title="Suggest charts" style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const quickchartButtonEl =
-        document.querySelector('#' + key + ' button');
-      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-      quickchartButtonEl.classList.add('colab-df-spinner');
-      try {
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      } catch (error) {
-        console.error('Error during call to suggestCharts:', error);
-      }
-      quickchartButtonEl.classList.remove('colab-df-spinner');
-      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-169079f1-d56c-4ff0-bbe7-758817930487 button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
-
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div id="cell-121" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012323477,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:530,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="1a45a5cb-8a68-403d-81c2-3d3732dc53aa" data-execution_count="168">
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a>breast_cancer.target_names</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="168">
-<pre><code>array(['malignant', 'benign'], dtype='&lt;U9')</code></pre>
-</div>
-</div>
-<div id="cell-122" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012325096,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:551,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="a47f8ebd-8dec-4ba5-9025-66aa819a0c4e" data-execution_count="169">
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> pd.Categorical.from_codes(breast_cancer.target, breast_cancer.target_names)</span>
-<span id="cb142-2"><a href="#cb142-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> pd.get_dummies(y, drop_first<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb142-3"><a href="#cb142-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="169">
-<div>
-
-  <div id="df-73cdfc1f-84f6-43b0-a317-781225d54505" class="colab-df-container">
-    <div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">benign</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">564</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">565</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">566</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">567</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">568</td>
-<td>True</td>
-</tr>
-</tbody>
-</table>
-
-<p>569 rows × 1 columns</p>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-73cdfc1f-84f6-43b0-a317-781225d54505')" title="Convert this dataframe to an interactive table." style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-73cdfc1f-84f6-43b0-a317-781225d54505 button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-73cdfc1f-84f6-43b0-a317-781225d54505');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-30c35368-078c-47c7-bfd5-3bf663007ece">
-  <button class="colab-df-quickchart" onclick="quickchart('df-30c35368-078c-47c7-bfd5-3bf663007ece')" title="Suggest charts" style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const quickchartButtonEl =
-        document.querySelector('#' + key + ' button');
-      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-      quickchartButtonEl.classList.add('colab-df-spinner');
-      try {
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      } catch (error) {
-        console.error('Error during call to suggestCharts:', error);
-      }
-      quickchartButtonEl.classList.remove('colab-df-spinner');
-      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-30c35368-078c-47c7-bfd5-3bf663007ece button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
-
-  <div id="id_6adc08c4-4893-42c9-90d8-4d0a00964094">
-    <style>
-      .colab-df-generate {
-        background-color: #E8F0FE;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        fill: #1967D2;
-        height: 32px;
-        padding: 0 0 0 0;
-        width: 32px;
-      }
-
-      .colab-df-generate:hover {
-        background-color: #E2EBFA;
-        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-        fill: #174EA6;
-      }
-
-      [theme=dark] .colab-df-generate {
-        background-color: #3B4455;
-        fill: #D2E3FC;
-      }
-
-      [theme=dark] .colab-df-generate:hover {
-        background-color: #434B5C;
-        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-        fill: #FFFFFF;
-      }
-    </style>
-    <button class="colab-df-generate" onclick="generateWithVariable('y')" title="Generate code using this dataframe." style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
-    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"></path>
-  </svg>
-    </button>
-    <script>
-      (() => {
-      const buttonEl =
-        document.querySelector('#id_6adc08c4-4893-42c9-90d8-4d0a00964094 button.colab-df-generate');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      buttonEl.onclick = () => {
-        google.colab.notebook.generateWithVariable('y');
-      }
-      })();
-    </script>
-  </div>
-
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div id="cell-123" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011852887,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:866,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-execution_count="145">
-<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cell-124" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012126789,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:2271,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="36afe816-dbe6-4c47-eede-0e4eef213afc" data-execution_count="160">
-<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a>knn <span class="op">=</span> KNeighborsClassifier(n_neighbors<span class="op">=</span><span class="dv">5</span>, metric<span class="op">=</span><span class="st">'euclidean'</span>)</span>
-<span id="cb144-2"><a href="#cb144-2" aria-hidden="true" tabindex="-1"></a>knn.fit(X_train, y_train)</span>
-<span id="cb144-3"><a href="#cb144-3" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> knn.predict(X_test)</span>
-<span id="cb144-4"><a href="#cb144-4" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(</span>
-<span id="cb144-5"><a href="#cb144-5" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'mean area'</span>,</span>
-<span id="cb144-6"><a href="#cb144-6" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'mean compactness'</span>,</span>
-<span id="cb144-7"><a href="#cb144-7" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">'benign'</span>,</span>
-<span id="cb144-8"><a href="#cb144-8" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>X_test.join(y_test, how<span class="op">=</span><span class="st">'outer'</span>)</span>
-<span id="cb144-9"><a href="#cb144-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/usr/local/lib/python3.10/dist-packages/sklearn/neighbors/_classification.py:215: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples,), for example using ravel().
-  return self._fit(X, y)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="cnu_bioinformatics_files/figure-html/cell-72-output-2.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="cell-125" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718011371990,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:341,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="e78a69da-216d-4736-bda9-95029c64108d" data-execution_count="127">
-<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> pd.DataFrame([y_test[<span class="st">"benign"</span>].values, y_pred], index<span class="op">=</span>(<span class="st">"test"</span>, <span class="st">"predict"</span>)).T</span>
-<span id="cb146-2"><a href="#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      test  predict
-0     True    False
-1    False    False
-2     True     True
-3    False    False
-4    False    False
-..     ...      ...
-138   True     True
-139   True     True
-140  False    False
-141  False    False
-142   True     True
-
-[143 rows x 2 columns]</code></pre>
-</div>
-</div>
-<div id="cell-126" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012092246,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:793,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="fced76c9-ba16-4218-f374-8f63398b1f81" data-execution_count="157">
-<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a>results[results[<span class="st">"test"</span>]<span class="op">+</span>results[<span class="st">"predict"</span>] <span class="op">==</span> <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="157">
-<div>
-
-  <div id="df-7957ec1a-0319-48ca-991f-07e75749dfdf" class="colab-df-container">
-    <div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">test</th>
-<th data-quarto-table-cell-role="th">predict</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">2</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">134</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">137</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">138</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">139</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">142</td>
-<td>True</td>
-<td>True</td>
-</tr>
-</tbody>
-</table>
-
-<p>93 rows × 2 columns</p>
-</div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-7957ec1a-0319-48ca-991f-07e75749dfdf')" title="Convert this dataframe to an interactive table." style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-7957ec1a-0319-48ca-991f-07e75749dfdf button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7957ec1a-0319-48ca-991f-07e75749dfdf');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-e7ef064d-10cf-4e20-bec2-02108cf3da74">
-  <button class="colab-df-quickchart" onclick="quickchart('df-e7ef064d-10cf-4e20-bec2-02108cf3da74')" title="Suggest charts" style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 0 24 24" width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const quickchartButtonEl =
-        document.querySelector('#' + key + ' button');
-      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-      quickchartButtonEl.classList.add('colab-df-spinner');
-      try {
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      } catch (error) {
-        console.error('Error during call to suggestCharts:', error);
-      }
-      quickchartButtonEl.classList.remove('colab-df-spinner');
-      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-e7ef064d-10cf-4e20-bec2-02108cf3da74 button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
-</div>
-
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div id="cell-127" class="cell" data-executioninfo="{&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1718012099565,&quot;user_tz&quot;:-540,&quot;elapsed&quot;:672,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;}}" data-outputid="f0d250bb-0875-4505-8b35-c12f4f0b0c8c" data-execution_count="158">
-<div class="sourceCode cell-code" id="cb149"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
-<span id="cb149-2"><a href="#cb149-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accuracy:"</span>,metrics.accuracy_score(y_test, y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Accuracy: 0.9440559440559441</code></pre>
-</div>
-</div>
-<div id="cell-128" class="cell">
-<div class="sourceCode cell-code" id="cb151"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.inspection <span class="im">import</span> permutation_importance</span>
-<span id="cb151-2"><a href="#cb151-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb151-3"><a href="#cb151-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute permutation feature importance</span></span>
-<span id="cb151-4"><a href="#cb151-4" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> permutation_importance(knn, X_test, y_test, n_repeats<span class="op">=</span><span class="dv">5</span>, random_state<span class="op">=</span><span class="dv">40</span>)</span>
-<span id="cb151-5"><a href="#cb151-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb151-6"><a href="#cb151-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Get importance scores</span></span>
-<span id="cb151-7"><a href="#cb151-7" aria-hidden="true" tabindex="-1"></a>feature_importance <span class="op">=</span> results.importances_mean</span>
-<span id="cb151-8"><a href="#cb151-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb151-9"><a href="#cb151-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot feature importance</span></span>
-<span id="cb151-10"><a href="#cb151-10" aria-hidden="true" tabindex="-1"></a>plt.bar(<span class="bu">range</span>(X.shape[<span class="dv">1</span>]), feature_importance, tick_label<span class="op">=</span>breast_cancer.feature_names)</span>
-<span id="cb151-11"><a href="#cb151-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Features'</span>)</span>
-<span id="cb151-12"><a href="#cb151-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Importance'</span>)</span>
-<span id="cb151-13"><a href="#cb151-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Feature Importance Using Permutation on Model'</span>)</span>
-<span id="cb151-14"><a href="#cb151-14" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span>
-<span id="cb151-15"><a href="#cb151-15" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb151-16"><a href="#cb151-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-
-
 </section>
 
 </main> <!-- /main -->
@@ -5274,6 +4094,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./cnu_machine_learning.html" class="pagination-link" aria-label="Machine Learning and Deep Learning">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Machine Learning and Deep Learning</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
