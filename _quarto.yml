@@ -18,6 +18,8 @@ book:
     - cnu_basic.ipynb
     - cnu_data_handling.ipynb
     - cnu_bioinformatics.ipynb
+    - cnu_machine_learning.ipynb
+    - cnu_deeplearning.ipynb
   
 
 format:

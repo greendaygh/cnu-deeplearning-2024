@@ -178,6 +178,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bioinformatics</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cnu_machine_learning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Machine Learning</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cnu_deeplearning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Deep Learning</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -188,12 +200,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#user" id="toc-user" class="nav-link active" data-scroll-target="#user"><span class="header-section-number">2.0.1</span> [User]</a></li>
-  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt"><span class="header-section-number">2.0.2</span> [ChatGPT]</a></li>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents"><span class="header-section-number">2.0.3</span> Table of Contents</a></li>
-  <li><a href="#user-1" id="toc-user-1" class="nav-link" data-scroll-target="#user-1"><span class="header-section-number">2.0.4</span> [User]</a></li>
-  <li><a href="#chatgpt-1" id="toc-chatgpt-1" class="nav-link" data-scroll-target="#chatgpt-1"><span class="header-section-number">2.0.5</span> [ChatGPT]</a></li>
-  <li><a href="#step-by-step-guide-to-setting-up-google-colab" id="toc-step-by-step-guide-to-setting-up-google-colab" class="nav-link" data-scroll-target="#step-by-step-guide-to-setting-up-google-colab"><span class="header-section-number">2.0.6</span> Step-by-Step Guide to Setting Up Google Colab</a></li>
+  <li><a href="#user" id="toc-user" class="nav-link active" data-scroll-target="#user"><span class="header-section-number">2.1</span> [User]</a></li>
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt"><span class="header-section-number">2.2</span> [ChatGPT]</a>
+  <ul class="collapse">
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents"><span class="header-section-number">2.2.1</span> Table of Contents</a></li>
+  </ul></li>
+  <li><a href="#user-1" id="toc-user-1" class="nav-link" data-scroll-target="#user-1"><span class="header-section-number">2.3</span> [User]</a></li>
+  <li><a href="#chatgpt-1" id="toc-chatgpt-1" class="nav-link" data-scroll-target="#chatgpt-1"><span class="header-section-number">2.4</span> [ChatGPT]</a>
+  <ul class="collapse">
+  <li><a href="#step-by-step-guide-to-setting-up-google-colab" id="toc-step-by-step-guide-to-setting-up-google-colab" class="nav-link" data-scroll-target="#step-by-step-guide-to-setting-up-google-colab"><span class="header-section-number">2.4.1</span> Step-by-Step Guide to Setting Up Google Colab</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -228,95 +244,94 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="user" class="level3" data-number="2.0.1">
-<h3 data-number="2.0.1" class="anchored" data-anchor-id="user"><span class="header-section-number">2.0.1</span> [User]</h3>
+<section id="user" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="user"><span class="header-section-number">2.1</span> [User]</h2>
 <p><span style="color:blue; font-size: 20px"> I want to learn python and use it for molecular biology research such as design of library sequence, design of experiments, read high-throughput sequencing file, apply deep learning algorithm. What topics do i need to learn? </span></p>
 </section>
-<section id="chatgpt" class="level3" data-number="2.0.2">
-<h3 data-number="2.0.2" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">2.0.2</span> [ChatGPT]</h3>
+<section id="chatgpt" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="chatgpt"><span class="header-section-number">2.2</span> [ChatGPT]</h2>
 <p>Learning Python for molecular biology research involves a blend of general programming skills and domain-specific knowledge. Here’s a structured guide on the topics you need to cover:</p>
-</section>
-<section id="table-of-contents" class="level3" data-number="2.0.3">
-<h3 data-number="2.0.3" class="anchored" data-anchor-id="table-of-contents"><span class="header-section-number">2.0.3</span> Table of Contents</h3>
-<section id="basic-python-programming" class="level4" data-number="2.0.3.1">
-<h4 data-number="2.0.3.1" class="anchored" data-anchor-id="basic-python-programming"><span class="header-section-number">2.0.3.1</span> 1. Basic Python Programming</h4>
+<section id="table-of-contents" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="table-of-contents"><span class="header-section-number">2.2.1</span> Table of Contents</h3>
+<section id="basic-python-programming" class="level4" data-number="2.2.1.1">
+<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="basic-python-programming"><span class="header-section-number">2.2.1.1</span> Basic Python Programming</h4>
 <ul>
 <li><strong>Python Syntax and Semantics</strong>: Learn basic syntax, data types (strings, lists, dictionaries), control structures (if statements, loops), functions, and error handling.</li>
 <li><strong>Modules and Packages</strong>: Understand how to import and use standard libraries and third-party packages.</li>
 <li><strong>File I/O</strong>: Learn how to read from and write to files.</li>
 </ul>
 </section>
-<section id="data-handling-and-analysis" class="level4" data-number="2.0.3.2">
-<h4 data-number="2.0.3.2" class="anchored" data-anchor-id="data-handling-and-analysis"><span class="header-section-number">2.0.3.2</span> 2. Data Handling and Analysis</h4>
+<section id="data-handling-and-analysis" class="level4" data-number="2.2.1.2">
+<h4 data-number="2.2.1.2" class="anchored" data-anchor-id="data-handling-and-analysis"><span class="header-section-number">2.2.1.2</span> Data Handling and Analysis</h4>
 <ul>
 <li><strong>NumPy</strong>: For numerical operations and handling arrays.</li>
 <li><strong>Pandas</strong>: For data manipulation and analysis, essential for handling tabular data, such as gene expression matrices.</li>
 <li><strong>Matplotlib/Seaborn</strong>: For data visualization to generate plots and graphs.</li>
 </ul>
 </section>
-<section id="bioinformatics-libraries" class="level4" data-number="2.0.3.3">
-<h4 data-number="2.0.3.3" class="anchored" data-anchor-id="bioinformatics-libraries"><span class="header-section-number">2.0.3.3</span> 3. Bioinformatics Libraries</h4>
+<section id="bioinformatics-libraries" class="level4" data-number="2.2.1.3">
+<h4 data-number="2.2.1.3" class="anchored" data-anchor-id="bioinformatics-libraries"><span class="header-section-number">2.2.1.3</span> Bioinformatics Libraries</h4>
 <ul>
 <li><strong>Biopython</strong>: Essential for biological computation. Learn how to read/write sequence files, perform sequence analysis, and interact with biological databases.</li>
 <li><strong>Scikit-bio</strong>: For biological analysis including sequence alignment, biodiversity analysis, etc.</li>
 </ul>
 </section>
-<section id="sequence-analysis" class="level4" data-number="2.0.3.4">
-<h4 data-number="2.0.3.4" class="anchored" data-anchor-id="sequence-analysis"><span class="header-section-number">2.0.3.4</span> 4. Sequence Analysis</h4>
+<section id="sequence-analysis" class="level4" data-number="2.2.1.4">
+<h4 data-number="2.2.1.4" class="anchored" data-anchor-id="sequence-analysis"><span class="header-section-number">2.2.1.4</span> Sequence Analysis</h4>
 <ul>
 <li><strong>FASTA/FASTQ Parsing</strong>: Learn how to parse sequence files.</li>
 <li><strong>Sequence Alignment</strong>: Understand the basics of sequence alignment (global and local), and tools like BLAST.</li>
 <li><strong>Motif Finding</strong>: Learn how to identify sequence motifs.</li>
 </ul>
 </section>
-<section id="high-throughput-sequencing-data" class="level4" data-number="2.0.3.5">
-<h4 data-number="2.0.3.5" class="anchored" data-anchor-id="high-throughput-sequencing-data"><span class="header-section-number">2.0.3.5</span> 5. High-Throughput Sequencing Data</h4>
+<section id="high-throughput-sequencing-data" class="level4" data-number="2.2.1.5">
+<h4 data-number="2.2.1.5" class="anchored" data-anchor-id="high-throughput-sequencing-data"><span class="header-section-number">2.2.1.5</span> High-Throughput Sequencing Data</h4>
 <ul>
 <li><strong>HTSeq</strong>: For reading and analyzing high-throughput sequencing data.</li>
 <li><strong>PySAM</strong>: For reading and manipulating SAM/BAM files (aligned sequencing reads).</li>
 <li><strong>SeqIO</strong>: Part of Biopython for input/output of sequence data.</li>
 </ul>
 </section>
-<section id="experimental-design" class="level4" data-number="2.0.3.6">
-<h4 data-number="2.0.3.6" class="anchored" data-anchor-id="experimental-design"><span class="header-section-number">2.0.3.6</span> 6. Experimental Design</h4>
+<section id="experimental-design" class="level4" data-number="2.2.1.6">
+<h4 data-number="2.2.1.6" class="anchored" data-anchor-id="experimental-design"><span class="header-section-number">2.2.1.6</span> Experimental Design</h4>
 <ul>
 <li><strong>Primer Design</strong>: Understand the principles of primer design and tools available (like Primer3) and their Python interfaces.</li>
 <li><strong>Golden Gate Assembly and Gibson Assembly</strong>: Learn the principles and how to design experiments programmatically.</li>
 </ul>
 </section>
-<section id="statistical-analysis" class="level4" data-number="2.0.3.7">
-<h4 data-number="2.0.3.7" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">2.0.3.7</span> 7. Statistical Analysis</h4>
+<section id="statistical-analysis" class="level4" data-number="2.2.1.7">
+<h4 data-number="2.2.1.7" class="anchored" data-anchor-id="statistical-analysis"><span class="header-section-number">2.2.1.7</span> Statistical Analysis</h4>
 <ul>
 <li><strong>SciPy</strong>: For scientific and technical computing.</li>
 <li><strong>Statsmodels</strong>: For statistical modeling.</li>
 <li><strong>R Integration</strong>: Learn how to use R from Python (via rpy2) if you need to use specific R packages for statistical analysis.</li>
 </ul>
 </section>
-<section id="machine-learning-and-deep-learning" class="level4" data-number="2.0.3.8">
-<h4 data-number="2.0.3.8" class="anchored" data-anchor-id="machine-learning-and-deep-learning"><span class="header-section-number">2.0.3.8</span> 8. Machine Learning and Deep Learning</h4>
+<section id="machine-learning-and-deep-learning" class="level4" data-number="2.2.1.8">
+<h4 data-number="2.2.1.8" class="anchored" data-anchor-id="machine-learning-and-deep-learning"><span class="header-section-number">2.2.1.8</span> Machine Learning and Deep Learning</h4>
 <ul>
 <li><strong>Scikit-learn</strong>: For machine learning algorithms.</li>
 <li><strong>TensorFlow/Keras or PyTorch</strong>: For deep learning.</li>
 <li><strong>Bioinformatics-specific models</strong>: Learn about models specific to bioinformatics, such as predicting protein structures or gene expression levels.</li>
 </ul>
 </section>
-<section id="workflow-automation" class="level4" data-number="2.0.3.9">
-<h4 data-number="2.0.3.9" class="anchored" data-anchor-id="workflow-automation"><span class="header-section-number">2.0.3.9</span> 9. Workflow Automation</h4>
+<section id="workflow-automation" class="level4" data-number="2.2.1.9">
+<h4 data-number="2.2.1.9" class="anchored" data-anchor-id="workflow-automation"><span class="header-section-number">2.2.1.9</span> Workflow Automation</h4>
 <ul>
 <li><strong>Snakemake</strong>: For workflow management.</li>
 <li><strong>Nextflow</strong>: Another workflow management tool, useful for reproducible research.</li>
 </ul>
 </section>
-<section id="advanced-topics" class="level4" data-number="2.0.3.10">
-<h4 data-number="2.0.3.10" class="anchored" data-anchor-id="advanced-topics"><span class="header-section-number">2.0.3.10</span> 10. Advanced Topics</h4>
+<section id="advanced-topics" class="level4" data-number="2.2.1.10">
+<h4 data-number="2.2.1.10" class="anchored" data-anchor-id="advanced-topics"><span class="header-section-number">2.2.1.10</span> Advanced Topics</h4>
 <ul>
 <li><strong>Data Integration</strong>: Integrating different types of biological data (genomic, transcriptomic, proteomic).</li>
 <li><strong>Network Biology</strong>: Understanding biological networks (e.g., protein-protein interaction networks).</li>
 <li><strong>Structural Bioinformatics</strong>: Analyzing protein structures using tools like PyMOL.</li>
 </ul>
 </section>
-<section id="learning-resources" class="level4" data-number="2.0.3.11">
-<h4 data-number="2.0.3.11" class="anchored" data-anchor-id="learning-resources"><span class="header-section-number">2.0.3.11</span> Learning Resources</h4>
+<section id="learning-resources" class="level4" data-number="2.2.1.11">
+<h4 data-number="2.2.1.11" class="anchored" data-anchor-id="learning-resources"><span class="header-section-number">2.2.1.11</span> Learning Resources</h4>
 <ol type="1">
 <li><strong>Books</strong>
 <ul>
@@ -339,38 +354,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>By following this structured guide, you’ll be able to leverage Python effectively for molecular biology research.</p>
 </section>
 </section>
-<section id="user-1" class="level3" data-number="2.0.4">
-<h3 data-number="2.0.4" class="anchored" data-anchor-id="user-1"><span class="header-section-number">2.0.4</span> [User]</h3>
+</section>
+<section id="user-1" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="user-1"><span class="header-section-number">2.3</span> [User]</h2>
 <p><span style="color:blue; font-size: 20px"> I’ll learn it using google colab. can you let me know how to setup the colab environment for this learning </span></p>
 </section>
-<section id="chatgpt-1" class="level3" data-number="2.0.5">
-<h3 data-number="2.0.5" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">2.0.5</span> [ChatGPT]</h3>
+<section id="chatgpt-1" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="chatgpt-1"><span class="header-section-number">2.4</span> [ChatGPT]</h2>
 <p>Certainly! Google Colab is an excellent platform for learning and running Python code, especially for bioinformatics. It provides a cloud-based Jupyter notebook environment that comes pre-configured with many scientific libraries. Here’s how to set up and use Google Colab for learning bioinformatics with Python:</p>
-</section>
-<section id="step-by-step-guide-to-setting-up-google-colab" class="level3" data-number="2.0.6">
-<h3 data-number="2.0.6" class="anchored" data-anchor-id="step-by-step-guide-to-setting-up-google-colab"><span class="header-section-number">2.0.6</span> Step-by-Step Guide to Setting Up Google Colab</h3>
-<section id="access-google-colab" class="level4" data-number="2.0.6.1">
-<h4 data-number="2.0.6.1" class="anchored" data-anchor-id="access-google-colab"><span class="header-section-number">2.0.6.1</span> 1. Access Google Colab</h4>
+<section id="step-by-step-guide-to-setting-up-google-colab" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="step-by-step-guide-to-setting-up-google-colab"><span class="header-section-number">2.4.1</span> Step-by-Step Guide to Setting Up Google Colab</h3>
+<section id="access-google-colab" class="level4" data-number="2.4.1.1">
+<h4 data-number="2.4.1.1" class="anchored" data-anchor-id="access-google-colab"><span class="header-section-number">2.4.1.1</span> Access Google Colab</h4>
 <ul>
 <li>Go to <a href="https://colab.research.google.com/">Google Colab</a> in your web browser.</li>
 <li>Sign in with your Google account.</li>
 </ul>
 </section>
-<section id="create-a-new-notebook" class="level4" data-number="2.0.6.2">
-<h4 data-number="2.0.6.2" class="anchored" data-anchor-id="create-a-new-notebook"><span class="header-section-number">2.0.6.2</span> 2. Create a New Notebook</h4>
+<section id="create-a-new-notebook" class="level4" data-number="2.4.1.2">
+<h4 data-number="2.4.1.2" class="anchored" data-anchor-id="create-a-new-notebook"><span class="header-section-number">2.4.1.2</span> Create a New Notebook</h4>
 <ul>
 <li>Click on <code>File</code> -&gt; <code>New Notebook</code> to create a new notebook.</li>
 </ul>
 </section>
-<section id="install-required-libraries" class="level4" data-number="2.0.6.3">
-<h4 data-number="2.0.6.3" class="anchored" data-anchor-id="install-required-libraries"><span class="header-section-number">2.0.6.3</span> 3. Install Required Libraries</h4>
+<section id="install-required-libraries" class="level4" data-number="2.4.1.3">
+<h4 data-number="2.4.1.3" class="anchored" data-anchor-id="install-required-libraries"><span class="header-section-number">2.4.1.3</span> Install Required Libraries</h4>
 <p>Google Colab comes with many libraries pre-installed, but you might need to install some additional ones, such as <code>biopython</code> and <code>scikit-bio</code>. You can do this using the <code>!pip install</code> command directly in a cell.</p>
 <div id="cell-6" class="cell" data-executioninfo="{&quot;elapsed&quot;:85629,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1716202250276,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="4a7c84cc-ce35-4bb1-fda6-b8776dc0e92b">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install biopython scikit<span class="op">-</span>bio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="import-libraries-and-verify-installation" class="level4" data-number="2.0.6.4">
-<h4 data-number="2.0.6.4" class="anchored" data-anchor-id="import-libraries-and-verify-installation"><span class="header-section-number">2.0.6.4</span> 4. Import Libraries and Verify Installation</h4>
+<section id="import-libraries-and-verify-installation" class="level4" data-number="2.4.1.4">
+<h4 data-number="2.4.1.4" class="anchored" data-anchor-id="import-libraries-and-verify-installation"><span class="header-section-number">2.4.1.4</span> Import Libraries and Verify Installation</h4>
 <p>In a new code cell, import the libraries to ensure they are installed correctly.</p>
 <div id="cell-8" class="cell" data-executioninfo="{&quot;elapsed&quot;:355,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1716201815035,&quot;user&quot;:{&quot;displayName&quot;:&quot;haseong kim&quot;,&quot;userId&quot;:&quot;15555769759698200025&quot;},&quot;user_tz&quot;:-540}" data-outputid="c65f85bd-8294-4606-e90e-586fe7170cc6" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importing necessary libraries</span></span>
@@ -385,8 +400,8 @@ scikit-bio version: 0.6.0</code></pre>
 </div>
 </div>
 </section>
-<section id="upload-files-to-colab" class="level4" data-number="2.0.6.5">
-<h4 data-number="2.0.6.5" class="anchored" data-anchor-id="upload-files-to-colab"><span class="header-section-number">2.0.6.5</span> 5. Upload Files to Colab</h4>
+<section id="upload-files-to-colab" class="level4" data-number="2.4.1.5">
+<h4 data-number="2.4.1.5" class="anchored" data-anchor-id="upload-files-to-colab"><span class="header-section-number">2.4.1.5</span> Upload Files to Colab</h4>
 <ul>
 <li><p>구글 드라이브에 <code>2024-cnu-lecture</code> 폴더를 만들기</p></li>
 <li><p>다운로드 하거나 공유된 (ipynb) 파일을 <code>2024-cnu-lecture</code> 폴더에 복사후 colab으로 open</p></li>
@@ -427,8 +442,8 @@ scikit-bio version: 0.6.0</code></pre>
 </figure>
 </div>
 </section>
-<section id="example-reading-a-genbank-file-and-analyzing-sequences" class="level4" data-number="2.0.6.6">
-<h4 data-number="2.0.6.6" class="anchored" data-anchor-id="example-reading-a-genbank-file-and-analyzing-sequences"><span class="header-section-number">2.0.6.6</span> 6. Example: Reading a GenBank File and Analyzing Sequences</h4>
+<section id="example-reading-a-genbank-file-and-analyzing-sequences" class="level4" data-number="2.4.1.6">
+<h4 data-number="2.4.1.6" class="anchored" data-anchor-id="example-reading-a-genbank-file-and-analyzing-sequences"><span class="header-section-number">2.4.1.6</span> Example: Reading a GenBank File and Analyzing Sequences</h4>
 <ul>
 <li>Here’s an example workflow that reads a GenBank file, performs sequence analysis with Biopython, and aligns sequences with scikit-bio:</li>
 <li>위에서 다운로드 받은 genbank 파일을 egfp.gb 이름으로 변경 후 업로드</li>
@@ -482,19 +497,19 @@ Start-End Positions: [(0, 382), (0, 9)]</code></pre>
 </div>
 </div>
 </section>
-<section id="saving-your-work" class="level4" data-number="2.0.6.7">
-<h4 data-number="2.0.6.7" class="anchored" data-anchor-id="saving-your-work"><span class="header-section-number">2.0.6.7</span> 7. Saving Your Work</h4>
+<section id="saving-your-work" class="level4" data-number="2.4.1.7">
+<h4 data-number="2.4.1.7" class="anchored" data-anchor-id="saving-your-work"><span class="header-section-number">2.4.1.7</span> Saving Your Work</h4>
 <p>You can save your notebook to Google Drive:</p>
 <ul>
 <li>Click on <code>File</code> -&gt; <code>Save a copy in Drive</code>.</li>
 </ul>
 </section>
-<section id="sharing-your-notebook" class="level4" data-number="2.0.6.8">
-<h4 data-number="2.0.6.8" class="anchored" data-anchor-id="sharing-your-notebook"><span class="header-section-number">2.0.6.8</span> 8. Sharing Your Notebook</h4>
+<section id="sharing-your-notebook" class="level4" data-number="2.4.1.8">
+<h4 data-number="2.4.1.8" class="anchored" data-anchor-id="sharing-your-notebook"><span class="header-section-number">2.4.1.8</span> Sharing Your Notebook</h4>
 <p>You can share your notebook with others by clicking on the <code>Share</code> button in the top right corner and setting the appropriate sharing permissions.</p>
 </section>
-<section id="example-colab-notebook" class="level4" data-number="2.0.6.9">
-<h4 data-number="2.0.6.9" class="anchored" data-anchor-id="example-colab-notebook"><span class="header-section-number">2.0.6.9</span> 9. Example Colab Notebook</h4>
+<section id="example-colab-notebook" class="level4" data-number="2.4.1.9">
+<h4 data-number="2.4.1.9" class="anchored" data-anchor-id="example-colab-notebook"><span class="header-section-number">2.4.1.9</span> Example Colab Notebook</h4>
 <p>Here’s a more comprehensive example notebook that includes reading files, sequence analysis, and visualization: (다음 코드 참고)</p>
 <p>This notebook covers: - Installing and importing bioinformatics libraries. - Uploading and reading files. - Performing sequence analysis. - Visualizing data.</p>
 <p>By following these steps and examples, you’ll be well-prepared to use Google Colab for your bioinformatics learning and research.</p>
@@ -539,6 +554,7 @@ Start-End Positions: [(0, 382), (0, 9)]</code></pre>
 </div>
 
 
+</section>
 </section>
 </section>
 
